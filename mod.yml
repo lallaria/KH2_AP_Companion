@@ -2,10 +2,11 @@ assets:
 - method: binarc
   name: 00battle.bin
   source:
-  - method: copy
+  - method: listpatch
     name: przt
     source:
-    - name: modified_drops.bin
+    - name: przt.yml
+      type: przt
     type: list
 - method: binarc
   name: 03system.bin
@@ -49,6 +50,10 @@ assets:
   source:
   - name: map_skip/libretto-ca.bar
 - method: copy
+  name: obj/N_BB080_BTL.mset
+  source:
+  - name: wardrobe_skip.mset
+- method: copy
   multi:
   - name: limit/us/trinity_zz.bar
   - name: limit/fr/trinity_zz.bar
@@ -74,8 +79,4 @@ assets:
   name: obj/W_EX010_RX.mset
   source:
   - name: better_stt/W_EX010_RX.mset
-- method: copy
-  name: obj/N_BB080_BTL.mset
-  source:
-  - name: wardrobe_skip.mset
 title: QoL Stuff
