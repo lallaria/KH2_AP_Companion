@@ -1,0 +1,32 @@
+Items:
+#DUMMY
+- Id: 460 #DUMMY 13 (DC Key)
+  Type: Recipe
+  Flag0: 0
+  Flag1: 0
+  Rank: C
+  StatEntry: 0
+  Name: 0xBD16
+  Description: 0xBD17
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 223
+  Picture: 31
+  Icon1: 0
+  Icon2: 2
+- Id: 461 #DUMMY 14 (AP Item)
+  Type: Recipe
+  Flag0: 0
+  Flag1: 0
+  Rank: C
+  StatEntry: 0
+  Name: 0xBD18
+  Description: 0xBD19
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 223
+  Picture: 32
+  Icon1: 0
+  Icon2: 2

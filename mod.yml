@@ -16,6 +16,12 @@ assets:
     source:
     - name: better_stt/cmd.list
     type: list
+  - name: item #Implement New Pictures
+    type: list
+    method: listpatch
+    source:
+    - name: 03system.bin/ItemList.yml
+      type: item
 - method: binarc
   multi:
   - name: ard/us/al11.ard
@@ -79,16 +85,34 @@ assets:
   name: obj/W_EX010_RX.mset
   source:
   - name: better_stt/W_EX010_RX.mset
-- name: itempic/item-243.imd #dummy 14
+- name: itempic/item-031.imd #dummy 13
   method: copy
   source:
-  - name: itempic/item-243.imd
+  - name: itempic/item-031.imd
+- name: itempic/item-032.imd #dummy 14
+  method: copy
+  source:
+  - name: itempic/item-032.imd
+- name: itempic/item-230.imd #letter
+  method: copy
+  source:
+  - name: itempic/item-230.imd
 #PC
-- name: remastered/itempic/item-243.imd/-0.dds #dummy 14
+- name: remastered/itempic/item-031.imd/-0.dds #dummy 13
   platform: pc
   method: copy
   source:
-  - name: remastered/itempic/-0.dds
+  - name: remastered/itempic/DC.dds
+- name: remastered/itempic/item-032.imd/-0.dds #dummy 14
+  platform: pc
+  method: copy
+  source:
+  - name: remastered/itempic/AP.dds
+- name: remastered/itempic/item-230.imd/-0.dds #letter
+  platform: pc
+  method: copy
+  source:
+  - name: remastered/itempic/LE.dds
 #Text
 - name: msg/jp/sys.bar
   platform: ps2
