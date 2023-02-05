@@ -1,0 +1,5 @@
+
+*.vsidx
+.vs/AP_QoL_Stuff/FileContentIndex/read.lock
+.vs/slnx.sqlite
+.vs/ProjectSettings.json
