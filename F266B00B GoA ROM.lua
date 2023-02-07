@@ -320,7 +320,7 @@ if Place == 0x000F then
 end	
 --Visits Unlock
 if true then
-	if ReadByte(Save+3640) > 0 then --poster
+	if ReadByte(Save+0x3640) > 0 then --poster
 		BitOr(Save+0x1CD2,0x10)--TT_INIT
 	end
 	if ReadByte(Save+0x364A) > 0 then --Picture
@@ -332,7 +332,7 @@ if true then
 
 	if ReadByte(Save+0x3643) > 0 then --Membership Card
 		BitOr(Save+0x1D1B,0x08)
-		if ReadByte(Save+0x35C1) > 1 then
+		if ReadByte(Save+0x3643) > 1 then
 			BitOr(Save+0x1C92,0x20) --ZZ_HB_CHECK_1_GOA
 			BitOr(Save+0x1C92,0x40) --ZZ_HB_CHECK_2_GOA
 		end	
