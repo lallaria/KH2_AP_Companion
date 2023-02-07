@@ -8,6 +8,12 @@ assets:
     - name: przt.yml
       type: przt
     type: list
+  - method: listpatch
+    name: plrp
+    source:
+    - name: PlrpList.yml
+      type: plrp  
+    type: List
 - method: binarc
   name: 03system.bin
   source:  
@@ -85,30 +91,39 @@ assets:
   name: obj/W_EX010_RX.mset
   source:
   - name: better_stt/W_EX010_RX.mset
-- name: itempic/item-031.imd #dummy 13
+- name: itempic/item-030.imd #Bounty (Castle Map)
+  method: copy
+  source:
+  - name: itempic/item-030.imd
+- name: itempic/item-031.imd #DC Key (dummy 13)
   method: copy
   source:
   - name: itempic/item-031.imd
-- name: itempic/item-032.imd #dummy 14
+- name: itempic/item-032.imd #AP Item (dummy 14)
   method: copy
   source:
   - name: itempic/item-032.imd
-- name: itempic/item-230.imd #letter
+- name: itempic/item-230.imd #Lucky Emblem (letter)
   method: copy
   source:
   - name: itempic/item-230.imd
 #PC
-- name: remastered/itempic/item-031.imd/-0.dds #dummy 13
+- name: remastered/itempic/item-030.imd/-0.dds #Bounty (Castle Map)
+  platform: pc
+  method: copy
+  source:
+  - name: remastered/itempic/Bounty.dds
+- name: remastered/itempic/item-031.imd/-0.dds #DC Key (dummy 13)
   platform: pc
   method: copy
   source:
   - name: remastered/itempic/DC.dds
-- name: remastered/itempic/item-032.imd/-0.dds #dummy 14
+- name: remastered/itempic/item-032.imd/-0.dds #AP Item (dummy 14)
   platform: pc
   method: copy
   source:
   - name: remastered/itempic/AP.dds
-- name: remastered/itempic/item-230.imd/-0.dds #letter
+- name: remastered/itempic/item-230.imd/-0.dds #Lucky Emblem (letter)
   platform: pc
   method: copy
   source:
@@ -138,6 +153,9 @@ assets:
     source:
     - name: msg/sys.yml
       language: en
-
-
+ #Lua Script
+- name: scripts/F266B00B GoA ROM.lua
+  method: copy
+  source:
+  - name: F266B00B GoA ROM.lua
 title: QoL Stuff

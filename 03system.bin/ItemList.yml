@@ -1,5 +1,19 @@
 Items:
-#DUMMY
+- Id: 90 #Castle Map (Bounty)
+  Type: Map
+  Flag0: 1
+  Flag1: 5
+  Rank: C
+  StatEntry: 0
+  Name: 34302
+  Description: 34303
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 8
+  Picture: 30
+  Icon1: 0
+  Icon2: 2
 - Id: 460 #DUMMY 13 (DC Key)
   Type: Recipe
   Flag0: 0
