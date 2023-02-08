@@ -266,6 +266,7 @@ if Place == 0x2002 and Events(0x01,Null,0x01) then --Station of Serenity Weapons
 	BitNot(Save+0x1E99,0x04)--pr1
 	BitNot(Save+0x1EB5,0x20)--tr
 	BitNot(Save+0x1E12,0x8)--dc
+	BitNot(Save+0x1CD0,0x1)--stt (tt_start1)
 
 end
 end
@@ -393,6 +394,13 @@ if true then
 	end
 	if ReadByte(Save+0x3642)>3 then --namine sketches
 		BitOr(Save+0x1E12,0x8)--Num will get back to me
+	end
+	if ReadByte(Save+0x1D0E)==9 then--day 5 progress
+		if ReadByte(Save+0x3642)>0 and ReadByte(Save+0x0368)==0 then-- if sketches >0 and evt for The Old Mansion ==0 then write 2
+			WriteByte(Save+0x0368,2)
+		else
+			WriteByte(Save+0x0368,0)--else not spawn the cutscene 
+		end
 	end		
 else --Remove the item requirements
 	BitOr(Save+0x1C92,0x08) --ZZ_TT_CHECK_1_GOA
