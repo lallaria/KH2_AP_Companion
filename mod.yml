@@ -1,3 +1,6 @@
+name: AP Compainion
+originalAuthor: JaredWeakStrike and Shananas
+description: Necessary files for the KH2 Archipelago. Thanks to num for assistance with GoA edits. Thanks to the KH2 Rando Devs for the Quality of life features.
 assets:
 - method: binarc
   name: 00battle.bin
