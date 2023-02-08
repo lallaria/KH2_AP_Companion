@@ -256,7 +256,7 @@ if Place == 0x2002 and Events(0x01,Null,0x01) then --Station of Serenity Weapons
 	BitOr(Save+0x49F0,0x03) --Shop Tutorial Prompt Flags (1=Big Shops, 2=Small Shops)
 	BitNot(Save+0x1CD2,0x10)--tt1
 	BitNot(Save+0x1D1B,0x08)--hb
-	BitNot(Save+0x1ED0,0x10)--twtwnw
+	--BitNot(Save+0x1ED0,0x10)--twtwnw this can cause softlocks
 	BitNot(Save+0x1D31,0x08)--bc
 	BitNot(Save+0x1D53,0x20)--oc
 	BitNot(Save+0x1D73,0x02)--ag
@@ -395,9 +395,9 @@ if true then
 	if ReadByte(Save+0x3642)>3 then --namine sketches
 		BitOr(Save+0x1E12,0x8)--Num will get back to me
 	end
-	if ReadByte(Save+0x1D0E)==9 then--day 5 progress
-		if ReadByte(Save+0x3642)>0 then 
-			BitOr(Save+0x1CD0,0x1)
+	if ReadByte(Save+0x3642)>0 then 
+		BitOr(Save+0x1CD0,0x1)
+		if ReadByte(Save+0x1D0E)==9 then--day 5 progress
 			if ReadByte(Save+0x3642)>1 and ReadByte(Save+0x0368)==0 then-- if sketches >0 and evt for The Old Mansion ==0 then write 2
 				WriteByte(Save+0x0368,2)
 			else
