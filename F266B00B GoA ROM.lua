@@ -396,11 +396,14 @@ if true then
 		BitOr(Save+0x1E12,0x8)--Num will get back to me
 	end
 	if ReadByte(Save+0x1D0E)==9 then--day 5 progress
-		if ReadByte(Save+0x3642)>0 and ReadByte(Save+0x0368)==0 then-- if sketches >0 and evt for The Old Mansion ==0 then write 2
-			WriteByte(Save+0x0368,2)
-		else
-			WriteByte(Save+0x0368,0)--else not spawn the cutscene 
-		end
+		if ReadByte(Save+0x3642)>0 then 
+			BitOr(Save+0x1CD0,0x1)
+			if ReadByte(Save+0x3642)>1 and ReadByte(Save+0x0368)==0 then-- if sketches >0 and evt for The Old Mansion ==0 then write 2
+				WriteByte(Save+0x0368,2)
+			else
+				WriteByte(Save+0x0368,0)--else not spawn the cutscene 
+			end
+		end	
 	end		
 else --Remove the item requirements
 	BitOr(Save+0x1C92,0x08) --ZZ_TT_CHECK_1_GOA
