@@ -1,3 +1,10 @@
+- id: 0x3B0F
+  en: Universal Key
+- id: 0x3B10
+  en: >-
+    Makes first and second visits unlock 
+
+    with only 1 visit unlocking item.
 - id: 0x3B13
   en: Lucky Emblem
 - id: 0x3B14
@@ -5,8 +12,12 @@
 - id: 0x3D16
   en: Disney Castle Key
 - id: 0x3D17
-  en: A key to progress in Disney Castle
+  en: A key to progress in Disney Castle.
 - id: 0x3D18
   en: Archipelago Item
 - id: 0x3D19
   en: An item for someone in another game.
+- id: 0x05FE
+  en: Bounty
+- id: 0x05FF
+  en: The Quicker Picker Upper.

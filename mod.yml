@@ -95,39 +95,50 @@ assets:
   method: copy
   source:
   - name: itempic/item-030.imd
-- name: itempic/item-031.imd #DC Key (dummy 13)
+- name: itempic/item-031.imd #DC Key (Dummy 13)
   method: copy
   source:
   - name: itempic/item-031.imd
-- name: itempic/item-032.imd #AP Item (dummy 14)
+- name: itempic/item-032.imd #AP Item (Dummy 14)
   method: copy
   source:
   - name: itempic/item-032.imd
-- name: itempic/item-230.imd #Lucky Emblem (letter)
+- name: itempic/item-228.imd #Universal Key (Tournament Poster)
+  method: copy
+  source:
+  - name: itempic/item-228.imd
+- name: itempic/item-230.imd #Lucky Emblem (Letter)
   method: copy
   source:
   - name: itempic/item-230.imd
+
 #PC
 - name: remastered/itempic/item-030.imd/-0.dds #Bounty (Castle Map)
   platform: pc
   method: copy
   source:
   - name: remastered/itempic/Bounty.dds
-- name: remastered/itempic/item-031.imd/-0.dds #DC Key (dummy 13)
+- name: remastered/itempic/item-031.imd/-0.dds #DC Key (Dummy 13)
   platform: pc
   method: copy
   source:
   - name: remastered/itempic/DC.dds
-- name: remastered/itempic/item-032.imd/-0.dds #AP Item (dummy 14)
+- name: remastered/itempic/item-032.imd/-0.dds #AP Item (Dummy 14)
   platform: pc
   method: copy
   source:
   - name: remastered/itempic/AP.dds
-- name: remastered/itempic/item-230.imd/-0.dds #Lucky Emblem (letter)
+- name: remastered/itempic/item-228.imd/-0.dds #Universal Key (Tournament Poster)
+  platform: pc
+  method: copy
+  source:
+  - name: remastered/itempic/-0.dds
+- name: remastered/itempic/item-230.imd/-0.dds #Lucky Emblem (Letter)
   platform: pc
   method: copy
   source:
   - name: remastered/itempic/LE.dds
+
 #Text
 - name: msg/jp/sys.bar
   platform: ps2
