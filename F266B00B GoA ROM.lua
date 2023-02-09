@@ -409,7 +409,8 @@ if true then
 					WriteByte(Save+0x0368,0)--else not spawn the cutscene 
 				end
 		end	
-	end		
+	end	
+end		
 else --Remove the item requirements
 	BitOr(Save+0x1C92,0x08) --ZZ_TT_CHECK_1_GOA
 	BitOr(Save+0x1C92,0x10) --ZZ_TT_CHECK_2_GOA
