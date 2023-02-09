@@ -322,7 +322,6 @@ if Place == 0x000F then
 end	
 --Visits Unlock
 if true then
-	
 	if ReadByte(Save+0x3640) > 0 then --poster
 		BitOr(Save+0x1CD2,0x10)--TT_INIT
 	end
@@ -340,14 +339,12 @@ if true then
 			BitOr(Save+0x1C92,0x40) --ZZ_HB_CHECK_2_GOA
 		end	
 	end
-
-	if (Save+0x1EDF)==1 and ReadByte(Save+0x35C1) > 0 then--Way to the Dawn 
-		if ReadByte(Save+0x1B2C)==0 then
-			WriteByte(Save+0x1B2C,2)
-		else
-			WriteByte(Save+0x1B2C,0)
+	if (Save+0x1EDF)==1 and ReadByte(Save+0x35C1) > 1 then--Way to the Dawn 
+		WriteByte(Save+0x1B2C,2)
+	else
+		WriteByte(Save+0x1B2C,0)
 	end
-	
+
 	if ReadByte(Save+0x35B3) > 0 then --Beast's Claw
 		BitOr(Save+0x1D31,0x08)
 		if ReadByte(Save+0x35B3) > 1 then 
@@ -399,17 +396,19 @@ if true then
 	if ReadByte(Save+0x365D)>0 then--dummy 13
 		BitOr(Save+0x1E12,0x8)--disney castle portal
 	end
-	if ReadByte(Save+0x3642)>0 then 
-		BitOr(Save+0x1CD0,0x1)
-			if ReadByte(Save+0x1D0E)==8 then--day 5 progress
-				if ReadByte(Save+0x3642)>1 and ReadByte(Save+0x035C)==0 then-- if sketches >0 and evt for The Old Mansion ==0 then write 2
-					WriteByte(Save+0x035C,2)
-				else
-					WriteByte(Save+0x035C,0)--else not spawn the cutscene 
-				end
+	if ReadByte(Save+0x3642)>3 then --namine sketches
+		BitOr(Save+0x1E12,0x8)--Num will get back to me
+	end
+	if ReadByte(Save+0x1D0E)==0 then--day 5 progress
+		if ReadByte(Save+0x3642)>0 then 
+			BitOr(Save+0x1CD0,0x1)
+			--if ReadByte(Save+0x3642)>1 and ReadByte(Save+0x0368)==0 then-- if sketches >0 and evt for The Old Mansion ==0 then write 2
+			--	WriteByte(Save+0x0368,2)
+			--else
+			--	WriteByte(Save+0x0368,0)--else not spawn the cutscene 
+			--end
 		end	
-	end	
-end		
+	end		
 else --Remove the item requirements
 	BitOr(Save+0x1C92,0x08) --ZZ_TT_CHECK_1_GOA
 	BitOr(Save+0x1C92,0x10) --ZZ_TT_CHECK_2_GOA
