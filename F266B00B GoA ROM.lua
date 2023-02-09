@@ -401,7 +401,7 @@ if true then
 	end
 	if ReadByte(Save+0x3642)>0 then 
 		BitOr(Save+0x1CD0,0x1)
-			if ReadByte(Save+0x1D0E)==9 then--day 5 progress
+			if ReadByte(Save+0x1D0E)==8 then--day 5 progress
 				if ReadByte(Save+0x3642)>1 and ReadByte(Save+0x035C)==0 then-- if sketches >0 and evt for The Old Mansion ==0 then write 2
 					WriteByte(Save+0x035C,2)
 				else
