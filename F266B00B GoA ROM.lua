@@ -325,11 +325,6 @@ if true then
 	
 	if ReadByte(Save+0x3640) > 0 then --poster
 		BitOr(Save+0x1CD2,0x10)--TT_INIT
-		if ReadByte(Save+0x0368)==0 then
-			WriteByte(Save+0x0368,2)--spawn starting cutscene
-		else
-			WriteByte(Save+0x0368,0)
-		end
 	end
 	if ReadByte(Save+0x364A) > 0 then --Picture
 		BitOr(Save+0x1C92,0x08) --ZZ_TT_CHECK_1_GOA
@@ -407,10 +402,10 @@ if true then
 	if ReadByte(Save+0x3642)>0 then 
 		BitOr(Save+0x1CD0,0x1)
 			if ReadByte(Save+0x1D0E)==9 then--day 5 progress
-				if ReadByte(Save+0x3642)>1 and ReadByte(Save+0x0368)==0 then-- if sketches >0 and evt for The Old Mansion ==0 then write 2
-					WriteByte(Save+0x0368,2)
+				if ReadByte(Save+0x3642)>1 and ReadByte(Save+0x035C)==0 then-- if sketches >0 and evt for The Old Mansion ==0 then write 2
+					WriteByte(Save+0x035C,2)
 				else
-					WriteByte(Save+0x0368,0)--else not spawn the cutscene 
+					WriteByte(Save+0x035C,0)--else not spawn the cutscene 
 				end
 		end	
 	end	
