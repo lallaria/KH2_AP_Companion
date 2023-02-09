@@ -340,9 +340,9 @@ if true then
 		end	
 	end
 	if ReadByte(Save+0x35C1) > 0 then
-		if (Save+0x1B2C)==0 and ReadByte(Save+0x35C1) > 1 and ReadByte(Save+0x1EDF)==1 then--Way to the Dawn 
+		if (Save+0x1B2C)==0 and ReadByte(Save+0x35C1) > 1 then--Way to the Dawn 
 			WriteByte(Save+0x1B2C,2)
-		else
+		elseif ReadByte(Save+0x1EDF)==1 then
 			WriteByte(Save+0x1B2C,0)
 		end
 	end
