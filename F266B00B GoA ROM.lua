@@ -325,7 +325,11 @@ if true then
 	
 	if ReadByte(Save+0x3640) > 0 then --poster
 		BitOr(Save+0x1CD2,0x10)--TT_INIT
-		WriteByte(Save+0x0368,2)--spawn starting cutscene
+		if ReadByte(Save+0x0368)==0 then
+			WriteByte(Save+0x0368,2)--spawn starting cutscene
+		else
+			WriteByte(Save+0x0368,0)
+		end
 	end
 	if ReadByte(Save+0x364A) > 0 then --Picture
 		BitOr(Save+0x1C92,0x08) --ZZ_TT_CHECK_1_GOA
