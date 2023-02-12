@@ -322,7 +322,9 @@ if Place == 0x000F then
 end	
 --Visits Unlock
 if true then
-
+	print(ReadByte(Save+0x1B62))
+	--print(ReadByte(Save+0x1EDF))
+	--WriteByte(Save+0x1B62,0)
 	if ReadByte(Save+0x3640) > 0 then --poster
 		BitOr(Save+0x1CD2,0x10)--TT_INIT
 	end
@@ -341,13 +343,13 @@ if true then
 		end	
 	end
 	if ReadByte(Save+0x35C1) > 0 then
-		if ReadByte(Save+0x1EDF)==1 then 
-			if ReadByte(Save+0x35C1) > 1 and ReadByte(0x1B2C)==0 then--Way to the Dawn 
-				WriteByte(Save+0x1B2C,2)
-			else
-				WriteByte(Save+0x1B2C,0)
+		if ReadByte(Save+0x1EDF)==3 then
+			if ReadByte(Save+0x35C1) > 1 and ReadByte(Save+0x1B62)==0 then
+				WriteByte(Save+0x1B62,2)
+			elseif ReadByte(Save+0x1B62)==2 and ReadByte(Save+0x35C1) < 2 then
+				WriteByte(Save+0x1B62,0)	
 			end
-		end 
+		end
 	end
 	if ReadByte(Save+0x35B3) > 0 then --Beast's Claw
 		BitOr(Save+0x1D31,0x08)
