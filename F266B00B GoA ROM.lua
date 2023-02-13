@@ -322,7 +322,7 @@ if Place == 0x000F then
 end	
 --Visits Unlock
 if true then
-	print(ReadByte(Save+0x1B62))
+	--print(ReadInt(ReadLong(Save+0x115080) + 0xC))
 	--print(ReadByte(Save+0x1EDF))
 	--WriteByte(Save+0x1B62,0)
 	if ReadByte(Save+0x3640) > 0 then --poster
@@ -401,6 +401,7 @@ if true then
 	end
 	if ReadByte(Save+0x365D)>0 then--dummy 13
 		BitOr(Save+0x1E12,0x8)--disney castle portal
+		
 	end
 	if ReadByte(Save+0x3642)>3 then --namine sketches
 		BitOr(Save+0x1E12,0x8)--Num will get back to me
@@ -2029,6 +2030,11 @@ if Place == 0x2604 and ReadInt(CutNow) == 0x7A then
 		end
 	end
 end
+if Place == 0x040C and Evt == 0x03 then --Hall of the Cornerstone (Dark) right before entering TR.
+	if ReadByte(Save+0x365D)<2 then 
+		Spawn('Short',0x07,0x034,0x00) --Remove RC
+	end	
+  end
 end
 
 function SP()
