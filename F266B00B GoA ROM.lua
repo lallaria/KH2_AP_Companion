@@ -342,15 +342,15 @@ if true then
 			BitOr(Save+0x1C92,0x40) --ZZ_HB_CHECK_2_GOA
 		end	
 	end
-	if ReadByte(Save+0x35C1) > 0 then--way to the dawn
-		if ReadByte(Save+0x1EDF)==3 then
-			if ReadByte(Save+0x35C1) > 0 and ReadByte(Save+0x1B62)==0 then
-				WriteByte(Save+0x1B62,2)
-			elseif ReadByte(Save+0x1B62)==2 and ReadByte(Save+0x35C1) < 1 then
-				WriteByte(Save+0x1B62,0)	
-			end
+	--if ReadByte(Save+0x35C1) > 0 then
+	if ReadByte(Save+0x1EDF)==3 then
+		if ReadByte(Save+0x35C1) > 0 and ReadByte(Save+0x1B62)==0 then--way to the dawn
+			WriteByte(Save+0x1B62,2)
+		elseif ReadByte(Save+0x1B62)==2 and ReadByte(Save+0x35C1) < 1 then
+			WriteByte(Save+0x1B62,0)	
 		end
 	end
+	--end
 	if ReadByte(Save+0x35B3) > 0 then --Beast's Claw
 		BitOr(Save+0x1D31,0x08)
 		if ReadByte(Save+0x35B3) > 1 then 
