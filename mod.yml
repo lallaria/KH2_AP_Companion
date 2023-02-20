@@ -1,4 +1,4 @@
-title: AP Compainion
+title: Archipelago Companion
 originalAuthor: JaredWeakStrike and Shananas
 description: Necessary files for the KH2 Archipelago. Thanks to num for assistance with GoA edits. Thanks to the KH2 Rando Devs for the Quality of life features.
 assets:
@@ -106,10 +106,6 @@ assets:
   method: copy
   source:
   - name: itempic/item-032.imd
-- name: itempic/item-228.imd #Universal Key (Tournament Poster)
-  method: copy
-  source:
-  - name: itempic/item-228.imd
 - name: itempic/item-230.imd #Lucky Emblem (Letter)
   method: copy
   source:
@@ -130,11 +126,6 @@ assets:
   method: copy
   source:
   - name: remastered/itempic/AP.dds
-- name: remastered/itempic/item-228.imd/-0.dds #Universal Key (Tournament Poster)
-  platform: pc
-  method: copy
-  source:
-  - name: remastered/itempic/-0.dds
 - name: remastered/itempic/item-230.imd/-0.dds #Lucky Emblem (Letter)
   platform: pc
   method: copy
@@ -227,4 +218,3 @@ assets:
     source:
     - name: hb38btl.script
     type: AreaDataScript
-title: Archipelago Companion
