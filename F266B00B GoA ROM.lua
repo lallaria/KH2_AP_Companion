@@ -661,7 +661,7 @@ while ReadByte(Save+0x3695) > ReadByte(Save+0x35C5) do
 	WriteByte(Save+0x35C5,ReadByte(Save+0x35C5)+1)
 end
 --DUMMY 23 = Maximum HP Increased!
-while ReadByte(Save+0x3671) > 0 do
+while ReadByte(Save+0x3671) > ReadByte(Save+0x35CC) do
 	local Bonus
 	if ReadByte(Save+0x2498) < 3 then --Non-Critical
 		Bonus = 5
@@ -670,10 +670,10 @@ while ReadByte(Save+0x3671) > 0 do
 	end
 	WriteInt(Slot1+0x000,ReadInt(Slot1+0x000)+Bonus)
 	WriteInt(Slot1+0x004,ReadInt(Slot1+0x004)+Bonus)
-	WriteByte(Save+0x3671,ReadByte(Save+0x3671)-1)
+	WriteByte(Save+0x35CC,ReadByte(Save+0x35CC)+1)
 end
 --DUMMY 24 = Maximum MP Increased!
-while ReadByte(Save+0x3672) > 0 do
+while ReadByte(Save+0x3672) > ReadByte(Save+0x35CD) do 
 	local Bonus
 	if ReadByte(Save+0x2498) < 3 then --Non-Critical
 		Bonus = 10
@@ -682,36 +682,36 @@ while ReadByte(Save+0x3672) > 0 do
 	end
 	WriteInt(Slot1+0x180,ReadInt(Slot1+0x180)+Bonus)
 	WriteInt(Slot1+0x184,ReadInt(Slot1+0x184)+Bonus)
-	WriteByte(Save+0x3672,ReadByte(Save+0x3672)-1)
+	WriteByte(Save+0x35CD,ReadByte(Save+0x35CD)+1)
 end
 --DUMMY 25 = Drive Gauge Powered Up!
-while ReadByte(Save+0x3673) > 0 do
+while ReadByte(Save+0x3673) > ReadByte(Save+0x35CE) do
 	if ReadByte(Slot1+0x1B2) < 9 then
 		WriteByte(Slot1+0x1B1,ReadByte(Slot1+0x1B1)+1)
 		WriteByte(Slot1+0x1B2,ReadByte(Slot1+0x1B2)+1)
 	end
-	WriteByte(Save+0x3673,ReadByte(Save+0x3673)-1)
+	WriteByte(Save+0x35CE,ReadByte(Save+0x35CE)+1)
 end
 --DUMMY 26 = Gained Armor Slot!
-while ReadByte(Save+0x3674) > 0 do
+while ReadByte(Save+0x3674) > ReadByte(Save+0x35D5) do
 	if ReadByte(Save+0x2500) < 8 then
 		WriteByte(Save+0x2500,ReadByte(Save+0x2500)+1)
 	end
-	WriteByte(Save+0x3674,ReadByte(Save+0x3674)-1)
+	WriteByte(Save+0x35D5,ReadByte(Save+0x35D5)+1)
 end
 --DUMMY 27 = Gained Accessory Slot!
-while ReadByte(Save+0x3675) > 0 do
+while ReadByte(Save+0x3675) > ReadByte(Save+0x35D6) do
 	if ReadByte(Save+0x2501) < 8 then
 		WriteByte(Save+0x2501,ReadByte(Save+0x2501)+1)
 	end
-	WriteByte(Save+0x3675,ReadByte(Save+0x3675)-1)
+	WriteByte(Save+0x35D6,ReadByte(Save+0x35D6)+1)
 end
 --DUMMY 16 = Gained Item Slot!
-while ReadByte(Save+0x3660) > 0 do
+while ReadByte(Save+0x3660) > ReadByte(Save+0x35DB) do
 	if ReadByte(Save+0x2502) < 8 then
 		WriteByte(Save+0x2502,ReadByte(Save+0x2502)+1)
 	end
-	WriteByte(Save+0x3660,ReadByte(Save+0x3660)-1)
+	WriteByte(Save+0x35DB,ReadByte(Save+0x35DB)+1)
 end
 --Donald's Staff Active Abilities
 if true then
