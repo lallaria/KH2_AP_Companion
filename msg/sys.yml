@@ -7,10 +7,10 @@
 - id: 0x3D17
   en: A key to progress in Disney Castle.
 - id: 0x3D18
-  en: Archipelago Item
-- id: 0x3D19
-  en: An item for someone in another game.
-- id: 0x05FE
   en: Bounty
-- id: 0x05FF
+- id: 0x3D19
   en: The Quicker Picker Upper.
+- id: 0x05FE
+  en: Archipelago Item
+- id: 0x05FF
+  en: An item for someone in another game.

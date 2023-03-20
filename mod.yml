@@ -31,6 +31,11 @@ assets:
     source:
     - name: 03system.bin/ItemList.yml
       type: item
+  - method: copy
+    name: shop
+    source:
+    - name: modified_shop.bin
+    type: unknown41
 - method: binarc
   multi:
   - name: ard/us/al11.ard
@@ -94,7 +99,7 @@ assets:
   name: obj/W_EX010_RX.mset
   source:
   - name: better_stt/W_EX010_RX.mset
-- name: itempic/item-030.imd #Bounty (Castle Map)
+- name: itempic/item-030.imd #AP Item (Castle Map)
   method: copy
   source:
   - name: itempic/item-030.imd
@@ -102,7 +107,7 @@ assets:
   method: copy
   source:
   - name: itempic/item-031.imd
-- name: itempic/item-032.imd #AP Item (Dummy 14)
+- name: itempic/item-032.imd #Bounty (Dummy 14)
   method: copy
   source:
   - name: itempic/item-032.imd
@@ -111,21 +116,21 @@ assets:
   source:
   - name: itempic/item-230.imd
 #PC
-- name: remastered/itempic/item-030.imd/-0.dds #Bounty (Castle Map)
+- name: remastered/itempic/item-030.imd/-0.dds #AP Item (Castle Map)
   platform: pc
   method: copy
   source:
-  - name: remastered/itempic/Bounty.dds
+  - name: remastered/itempic/AP.dds
 - name: remastered/itempic/item-031.imd/-0.dds #DC Key (Dummy 13)
   platform: pc
   method: copy
   source:
   - name: remastered/itempic/DC.dds
-- name: remastered/itempic/item-032.imd/-0.dds #AP Item (Dummy 14)
+- name: remastered/itempic/item-032.imd/-0.dds #Bounty (Dummy 14)
   platform: pc
   method: copy
   source:
-  - name: remastered/itempic/AP.dds
+  - name: remastered/itempic/Bounty.dds
 - name: remastered/itempic/item-230.imd/-0.dds #Lucky Emblem (Letter)
   platform: pc
   method: copy
