@@ -54,7 +54,7 @@ Items:
   Name: 33528
   Picture: 1
   Rank: C
-  ShopBuy: 999
+  ShopBuy: 40
   ShopSell: 10
   Slot: 0
   StatEntry: 1
@@ -69,7 +69,7 @@ Items:
   Name: 33530
   Picture: 2
   Rank: C
-  ShopBuy: 999
+  ShopBuy: 100
   ShopSell: 25
   Slot: 1
   StatEntry: 2
@@ -84,7 +84,7 @@ Items:
   Name: 33532
   Picture: 4
   Rank: C
-  ShopBuy: 999
+  ShopBuy: 120
   ShopSell: 30
   Slot: 2
   StatEntry: 3
@@ -99,7 +99,7 @@ Items:
   Name: 33534
   Picture: 7
   Rank: C
-  ShopBuy: 999
+  ShopBuy: 350
   ShopSell: 50
   Slot: 3
   StatEntry: 4
@@ -114,7 +114,7 @@ Items:
   Name: 33536
   Picture: 3
   Rank: C
-  ShopBuy: 999
+  ShopBuy: 100
   ShopSell: 30
   Slot: 4
   StatEntry: 1
@@ -129,7 +129,7 @@ Items:
   Name: 33538
   Picture: 6
   Rank: C
-  ShopBuy: 999
+  ShopBuy: 200
   ShopSell: 30
   Slot: 5
   StatEntry: 3
@@ -144,7 +144,7 @@ Items:
   Name: 33540
   Picture: 8
   Rank: C
-  ShopBuy: 999
+  ShopBuy: 700
   ShopSell: 100
   Slot: 6
   StatEntry: 4
@@ -159,7 +159,7 @@ Items:
   Name: 34220
   Picture: 33
   Rank: C
-  ShopBuy: 999
+  ShopBuy: 100
   ShopSell: 25
   Slot: 97
   StatEntry: 0
@@ -174,7 +174,7 @@ Items:
   Name: 47577
   Picture: 9
   Rank: C
-  ShopBuy: 999
+  ShopBuy: 400
   ShopSell: 20
   Slot: 228
   StatEntry: 0
@@ -189,7 +189,7 @@ Items:
   Name: 47579
   Picture: 10
   Rank: C
-  ShopBuy: 999
+  ShopBuy: 600
   ShopSell: 30
   Slot: 229
   StatEntry: 0
