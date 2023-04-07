@@ -7,7 +7,7 @@ LUAGUI_AUTH = 'SonicShadowSilver2 (Ported by Num)'
 LUAGUI_DESC = 'A GoA build for use with the Randomizer. Requires ROM patching.'
 
 function _OnInit()
-print('GoA v1.53.4 Archipelago Version')
+	ConsolePrint('GoA v1.53.4 Archipelago Version')
 if (GAME_ID == 0xF266B00B or GAME_ID == 0xFAF99301) and ENGINE_TYPE == "ENGINE" then --PCSX2
 	if ENGINE_VERSION < 3.0 then
 		print('LuaEngine is Outdated. Things might not work properly.')
@@ -591,48 +591,15 @@ for Slot = 0,68 do
 	local Ability = ReadShort(Current) & 0x0FFF
 	local Initial = ReadShort(Current) & 0xF000
 	if Ability >= 0x05E and Ability <= 0x061 then --High Jump
-		local Slot70 = Save+0x25CE
 		WriteShort(Current,0)
-		if ReadShort(Slot70)|0x8000 < 0x805E then
-			WriteShort(Slot70,0x005E|Initial)
-		elseif ReadShort(Slot70)|0x8000 < 0x8061 then
-			WriteShort(Slot70,ReadShort(Slot70)+1)
-		end
 	elseif Ability >= 0x062 and Ability <= 0x065 then --Quick Run
-		local Slot71 = Save+0x25D0
 		WriteShort(Current,0)
-		if ReadShort(Slot71)|0x8000 < 0x8062 then
-			WriteShort(Slot71,0x0062|Initial)
-		elseif ReadShort(Slot71)|0x8000 < 0x8065 then
-			WriteShort(Slot71,ReadShort(Slot71)+1)
-		end
 	elseif Ability >= 0x234 and Ability <= 0x237 then --Dodge Roll
-		local Slot72 = Save+0x25D2
 		WriteShort(Current,0)
-		if ReadShort(Slot72)|0x8000 < 0x8234 then
-			WriteShort(Slot72,0x0234|Initial)
-		elseif ReadShort(Slot72)|0x8000 < 0x8237 then
-			WriteShort(Slot72,ReadShort(Slot72)+1)
-		end
 	elseif Ability >= 0x066 and Ability <= 0x069 then --Aerial Dodge
-		local Slot73 = Save+0x25D4
 		WriteShort(Current,0)
-		if ReadShort(Slot73)|0x8000 < 0x8066 then
-			WriteShort(Slot73,0x0066|Initial)
-		elseif ReadShort(Slot73)|0x8000 < 0x8069 then
-			WriteShort(Slot73,ReadShort(Slot73)+1)
-		end
 	elseif Ability >= 0x06A and Ability <= 0x06D then --Glide
-		local Slot74 = Save+0x25D6
 		WriteShort(Current,0)
-		if ReadShort(Slot74)|0x8000 < 0x806A then
-			WriteShort(Slot74,0x006A|Initial)
-		elseif ReadShort(Slot74)|0x8000 < 0x806D then
-			WriteShort(Slot74,ReadShort(Slot74)+1)
-		end
-	elseif Ability == 0x0C6 and false then --Trinity Limit
-		WriteShort(Current,0)
-		WriteShort(Save+0x25D8,0x00C6)
 	end
 end
 --Remove Growth Abilities
