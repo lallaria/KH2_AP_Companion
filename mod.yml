@@ -2,6 +2,11 @@ title: Archipelago Companion
 originalAuthor: JaredWeakStrike and Shananas
 description: Necessary files for the KH2 Archipelago. Thanks to num for assistance with GoA edits. Thanks to the KH2 Rando Devs for the Quality of life features.
 assets:
+#Lua Script
+- name: scripts/F266B00B GoA ROM.lua
+  method: copy
+  source:
+  - name: F266B00B GoA ROM.lua
 - method: binarc
   name: 00battle.bin
   source:
@@ -161,11 +166,6 @@ assets:
     source:
     - name: msg/sys.yml
       language: en
-#Lua Script
-- name: scripts/F266B00B GoA ROM.lua
-  method: copy
-  source:
-  - name: F266B00B GoA ROM.lua
 #AS/Data switch
 - method: binarc
   multi:
@@ -223,3 +223,10 @@ assets:
     source:
     - name: hb38btl.script
     type: AreaDataScript
+#obj
+- method: copy
+  name: obj/M_EX590.mset
+  multi:
+  - name: obj/M_EX590_NM.mset
+  source:
+  - name: M_EX590.mset
