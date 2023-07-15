@@ -680,6 +680,51 @@ while ReadByte(Save+0x3660) > ReadByte(Save+0x35DB) and ReadInt(Slot1+0x000)== R
 	end
 	WriteByte(Save+0x35DB,ReadByte(Save+0x35DB)+1)
 end
+-- if potion null is greater than counter
+while ReadByte(Save+0x36B8) > ReadByte(Save+0x3613) do
+	WriteByte(Save+0x3580,ReadByte(Save+0x3580)+1)
+	WriteByte(Save+0x3613,ReadByte(Save+0x3613)+1)
+end
+-- if hi potion null is greater than counter
+while ReadByte(Save+0x36B9) > ReadByte(Save+0x3614) do
+	WriteByte(Save+0x3581,ReadByte(Save+0x3581)+1)
+	WriteByte(Save+0x3614,ReadByte(Save+0x3614)+1)
+end
+-- if ether null is greater than counter
+while ReadByte(Save+0x36BA) > ReadByte(Save+0x3615) do
+	WriteByte(Save+0x3582,ReadByte(Save+0x3582)+1)
+	WriteByte(Save+0x3615,ReadByte(Save+0x3615)+1)
+end
+
+-- if elixer null is greater than counter
+while ReadByte(Save+0x36BB) > ReadByte(Save+0x3616) do
+	WriteByte(Save+0x3583,ReadByte(Save+0x3583)+1)
+	WriteByte(Save+0x3616,ReadByte(Save+0x3616)+1)
+end
+
+-- if megaexlier null is greater than counter
+while ReadByte(Save+0x36BC) > ReadByte(Save+0x360E) do
+	WriteByte(Save+0x3586,ReadByte(Save+0x3586)+1)
+	WriteByte(Save+0x360E,ReadByte(Save+0x360E)+1)
+end
+
+-- if tent null is greater than counter
+while ReadByte(Save+0x36BD) > ReadByte(Save+0x360D) do
+	WriteByte(Save+0x35E1,ReadByte(Save+0x35E1)+1)
+	WriteByte(Save+0x360D,ReadByte(Save+0x360D)+1)
+end
+
+-- if drive recov null is greater than counter
+while ReadByte(Save+0x36BE) > ReadByte(Save+0x360C) do
+	WriteByte(Save+0x3664,ReadByte(Save+0x3664)+1)
+	WriteByte(Save+0x360C,ReadByte(Save+0x360C)+1)
+end
+
+-- if high drive recov null is greater than counter
+while ReadByte(Save+0x36BF) > ReadByte(Save+0x360B) do
+	WriteByte(Save+0x3665,ReadByte(Save+0x3665)+1)
+	WriteByte(Save+0x360B,ReadByte(Save+0x360B)+1)
+end
 --Donald's Staff Active Abilities
 if true then
 	local Staff   = ReadShort(Save+0x2604)
