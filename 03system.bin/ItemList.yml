@@ -44,6 +44,127 @@ Items:
   Picture: 32
   Icon1: 0
   Icon2: 2
+- Id: 127 #Piglet Howse Map (Potion)
+  Type: Map
+  Flag0: 1
+  Flag1: 9
+  Rank: 0
+  StatEntry: 0
+  Name: 33528
+  Description: 33529
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 29
+  Picture: 1
+  Icon1: 0
+  Icon2: 2
+- Id: 126 #Rabbits Howse Map (HiPotion)
+  Type: Map
+  Flag0: 1
+  Flag1: 9
+  Rank: 0
+  StatEntry: 0
+  Name: 33530
+  Description: 33531
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 28
+  Picture: 2
+  Icon1: 0
+  Icon2: 2
+- Id: 128 #Kangas Howse Map (Ether)
+  Type: Map
+  Flag0: 1
+  Flag1: 9
+  Rank: 0
+  StatEntry: 0
+  Name: 33532
+  Description: 33533
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 30
+  Picture: 4
+  Icon1: 0
+  Icon2: 2
+- Id: 129 #Spooky Cave Map (Elixir)
+  Type: Map
+  Flag0: 1
+  Flag1: 9
+  Rank: 0
+  StatEntry: 0
+  Name: 33534
+  Description: 33535
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 31
+  Picture: 7
+  Icon1: 0
+  Icon2: 2
+- Id: 124 #Starry Hill Map (Megalixir)
+  Type: Map
+  Flag0: 1
+  Flag1: 9
+  Rank: 0
+  StatEntry: 0
+  Name: 33540
+  Description: 33541
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 26
+  Picture: 8
+  Icon1: 0
+  Icon2: 2
+- Id: 512 #Savannah Map (Tent)
+  Type: Map
+  Flag0: 1
+  Flag1: 10
+  Rank: 0
+  StatEntry: 0
+  Name: 34220
+  Description: 34221
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 71
+  Picture: 33
+  Icon1: 0
+  Icon2: 2
+- Id: 252 #Pride Rock Map (DriveRecovery)
+  Type: Map
+  Flag0: 1
+  Flag1: 10
+  Rank: 0
+  StatEntry: 0
+  Name: 47577
+  Description: 47578
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 60
+  Picture: 9
+  Icon1: 0
+  Icon2: 2
+- Id: 511 #Oasis Map (HighDriveRecovery)
+  Type: Map
+  Flag0: 1
+  Flag1: 10
+  Rank: 0
+  StatEntry: 0
+  Name: 47579
+  Description: 47580
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 70
+  Picture: 10
+  Icon1: 0
+  Icon2: 2
+#Shop Item Prices
 - Command: 23
   Description: 33529
   Flag0: 0
