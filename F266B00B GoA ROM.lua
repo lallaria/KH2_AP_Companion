@@ -278,6 +278,9 @@ if Place == 0x1A04 then
 	--Open Promise Charm Path
 	if ReadByte(Save+0x3694) > 0 then --All Proofs & Promise Charm
 		Spawn('Short',0x06,0x05C,0x77A) --Text
+		if World==18 and Room==27 and Place==6930 then
+			Warp(2,33,8450)
+		end
 	end
 	--Demyx's Portal Text
 	if ReadByte(Save+0x1D2E) > 0 then --Hollow Bastion Cleared
@@ -344,10 +347,18 @@ if true then
 	end
 	--if ReadByte(Save+0x35C1) > 0 then
 	if ReadByte(Save+0x1EDF)==3 then
-		if ReadByte(Save+0x35C1) > 0 and ReadByte(Save+0x1B62)==0 then--way to the dawn
-			WriteByte(Save+0x1B62,2)
-		elseif ReadByte(Save+0x1B62)==2 and ReadByte(Save+0x35C1) < 1 then
-			WriteByte(Save+0x1B62,0)	
+		if ReadByte(Save+0x3607)>0 then 
+			if ReadByte(Save+0x35C1) > 1 and ReadByte(Save+0x1B62)==0 then--way to the dawn
+				WriteByte(Save+0x1B62,2)
+			elseif ReadByte(Save+0x1B62)==2 and ReadByte(Save+0x35C1) < 2 then
+				WriteByte(Save+0x1B62,0)	
+			end
+		else
+			if ReadByte(Save+0x35C1) > 0 and ReadByte(Save+0x1B62)==0 then--way to the dawn
+				WriteByte(Save+0x1B62,2)
+			elseif ReadByte(Save+0x1B62)==2 and ReadByte(Save+0x35C1) < 1 then
+				WriteByte(Save+0x1B62,0)	
+			end
 		end
 	end
 	--end
@@ -910,6 +921,15 @@ end
 --Xemnas II Laser Dome Skip
 if Place == 0x1412 and ReadInt(Slot3) == 1 then
 	WriteInt(Slot3,0)
+end
+if Place==786 and World==18 and Room==3 and ReadByte(Save+0x35C1) < 1 and ReadByte(Save+0x3607) > 0 then
+	Warp(18,1)
+end
+
+if ReadByte(Save+0x3694) > 0 and ReadByte(Save+0x36B3) < 1 then --All Proofs & Promise Charm
+	if World==18 and Room==27 and Place==6930 then
+		Warp(2,33)
+	end
 end
 end
 
