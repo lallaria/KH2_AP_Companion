@@ -223,13 +223,6 @@ assets:
     source:
     - name: hb38btl.script
     type: AreaDataScript
-#obj
-- method: copy
-  name: obj/M_EX590.mset
-  multi:
-  - name: obj/M_EX590_NM.mset
-  source:
-  - name: M_EX590.mset
 
 - name: menu/fm/title.2ld
   multi:
