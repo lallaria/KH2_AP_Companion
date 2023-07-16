@@ -922,7 +922,8 @@ end
 if Place == 0x1412 and ReadInt(Slot3) == 1 then
 	WriteInt(Slot3,0)
 end
-if Place==786 and World==18 and Room==3 and ReadByte(Save+0x35C1) < 1 and ReadByte(Save+0x3607) > 0 then
+-- roxas wrong warp
+if Place==786 and World==18 and Room==3 and ReadByte(Save+0x35C1) < 1 and ReadByte(Save+0x3607) > 0 and PrevPlace==530 then
 	Warp(18,1)
 end
 
