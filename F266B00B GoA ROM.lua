@@ -265,7 +265,7 @@ function GoA()
 --Garden of Assemblage Rearrangement
 if Place == 0x1A04 then
 	--Open Promise Charm Path
-	if ReadByte(Save+0x36B2) > 0 and ReadByte(Save+0x36B3) > 0 and ReadByte(Save+0x36B4) > 0 and ReadByte(Save+0x3694) > 0 then --All Proofs & Promise Charm
+	if ReadByte(Save+0x3694) > 0 then --All Proofs & Promise Charm
 		WriteShort(BAR(ARD,0x06,0x05C),0x77A,OnPC) --Text
 		if World==18 and Room==27 and Place==6930 then
 			Warp(2,33,8450)
