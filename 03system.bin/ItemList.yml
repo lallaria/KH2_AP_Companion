@@ -28,7 +28,7 @@ Items:
   Slot: 221
   Picture: 31
   Icon1: 0
-  Icon2: 2
+  Icon2: 19
 - Id: 461 #DUMMY 14 (AP Item)
   Type: Recipe
   Flag0: 0
@@ -44,6 +44,21 @@ Items:
   Picture: 32
   Icon1: 0
   Icon2: 2
+- Id: 367 # Letter (Lucky Emblem)
+  Type: Recipe
+  Flag0: 0
+  Flag1: 0
+  Rank: C
+  StatEntry: 0
+  Name: 47891
+  Description: 47892
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 193
+  Picture: 230
+  Icon1: 0
+  Icon2: 19
 - Id: 127 #Piglet Howse Map (Potion)
   Type: Map
   Flag0: 1
@@ -58,7 +73,7 @@ Items:
   Slot: 29
   Picture: 1
   Icon1: 0
-  Icon2: 2
+  Icon2: 0
 - Id: 126 #Rabbits Howse Map (HiPotion)
   Type: Map
   Flag0: 1
@@ -73,7 +88,7 @@ Items:
   Slot: 28
   Picture: 2
   Icon1: 0
-  Icon2: 2
+  Icon2: 0
 - Id: 128 #Kangas Howse Map (Ether)
   Type: Map
   Flag0: 1
@@ -88,7 +103,7 @@ Items:
   Slot: 30
   Picture: 4
   Icon1: 0
-  Icon2: 2
+  Icon2: 0
 - Id: 129 #Spooky Cave Map (Elixir)
   Type: Map
   Flag0: 1
@@ -103,7 +118,7 @@ Items:
   Slot: 31
   Picture: 7
   Icon1: 0
-  Icon2: 2
+  Icon2: 0
 - Id: 124 #Starry Hill Map (Megalixir)
   Type: Map
   Flag0: 1
@@ -118,7 +133,7 @@ Items:
   Slot: 26
   Picture: 8
   Icon1: 0
-  Icon2: 2
+  Icon2: 0
 - Id: 512 #Savannah Map (Tent)
   Type: Map
   Flag0: 1
@@ -133,7 +148,7 @@ Items:
   Slot: 71
   Picture: 33
   Icon1: 0
-  Icon2: 2
+  Icon2: 1
 - Id: 252 #Pride Rock Map (DriveRecovery)
   Type: Map
   Flag0: 1
@@ -148,7 +163,7 @@ Items:
   Slot: 60
   Picture: 9
   Icon1: 0
-  Icon2: 2
+  Icon2: 1
 - Id: 511 #Oasis Map (HighDriveRecovery)
   Type: Map
   Flag0: 1
@@ -163,7 +178,7 @@ Items:
   Slot: 70
   Picture: 10
   Icon1: 0
-  Icon2: 2
+  Icon2: 1
 #Shop Item Prices
 - Command: 23
   Description: 33529
