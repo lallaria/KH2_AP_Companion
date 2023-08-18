@@ -908,6 +908,16 @@ if Place == 0x1212 then
 		WriteShort(BAR(ARD,0x05,0x060),0x000,OnPC) --Despawn Door RC
 	end
 end
+-- roxas wrong warp
+if Place==786 and World==18 and Room==3 and ReadByte(Save+0x35C1) < 1 and ReadByte(Save+0x3607) > 0 and PrevPlace==530 then
+	Warp(18,1)
+end
+-- not letting promise charm win without proofs
+if ReadByte(Save+0x3694) > 0 and ReadByte(Save+0x36B3) < 1 then --nonexistance & Promise Charm
+	if World==18 and Room==27 and Place==6930 then
+		Warp(2,33)
+	end
+end
 end
 
 function LoD()
