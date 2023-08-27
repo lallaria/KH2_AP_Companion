@@ -718,6 +718,26 @@ while ReadByte(Save+0x36BF) > ReadByte(Save+0x360B) do
 	WriteByte(Save+0x3665,ReadByte(Save+0x3665)+1)
 	WriteByte(Save+0x360B,ReadByte(Save+0x360B)+1)
 end
+-- power boost
+while ReadByte(Save+0x359D)>ReadByte(Save+0x360A) do
+	WriteByte(Save+0x3666,ReadByte(Save+0x3666)+1)
+	WriteByte(Save+0x360A,ReadByte(Save+0x360A)+1)
+end
+-- magic boost
+while ReadByte(Save+0x35E0)>ReadByte(Save+0x3609) do
+	WriteByte(Save+0x3667,ReadByte(Save+0x3667)+1)
+	WriteByte(Save+0x3609,ReadByte(Save+0x3609)+1)
+end
+-- defence boost
+while ReadByte(Save+0x35F8)>ReadByte(Save+0x3608) do
+	WriteByte(Save+0x3668,ReadByte(Save+0x3668)+1)
+	WriteByte(Save+0x3608,ReadByte(Save+0x3608)+1)
+end
+-- ap boost
+while ReadByte(Save+0x35FE)>ReadByte(Save+0x3599) do
+	WriteByte(Save+0x3669,ReadByte(Save+0x3669)+1)
+	WriteByte(Save+0x3599,ReadByte(Save+0x3599)+1)
+end
 --Donald's Staff Active Abilities
 if true then
 	local Staff   = ReadShort(Save+0x2604)
