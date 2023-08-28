@@ -221,6 +221,34 @@ STT()
 AW()
 At()
 Data()
+-- use master form in aw
+local offset = 0x56454E
+local drive1 = 0x3F059E - offset
+local drive2 = 0x3FF734 - offset
+local drive3 = 0x3E107C - offset
+local drive4 = 0x3FF788 - offset
+local drive5 = 0x3FE3C4 - offset
+local drive6 = 0x3C07CE - offset
+local drive7 = 0x3F05BA - offset
+if World==9 then
+	if ReadByte(drive1) == 0x74 then
+		WriteByte(drive1, 0x77)
+		WriteShort(drive2, 0x820F)
+		WriteByte(drive3, 0x72)
+		WriteShort(drive4, 0x820F)
+		WriteByte(drive5, 0x7D)
+		WriteByte(drive6, 0x7D)
+		WriteByte(drive7, 0x03)
+		end
+elseif ReadByte(drive1)==0x77 then
+	WriteByte(drive1, 0x74)
+	WriteShort(drive2, 0x850F)
+	WriteByte(drive3, 0x78)
+	WriteShort(drive4, 0x850F)
+	WriteByte(drive5, 0x74)
+	WriteByte(drive6, 0x74)
+	WriteByte(drive7, 0x01)
+end
 end
 
 function NewGame()

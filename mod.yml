@@ -276,3 +276,18 @@ assets:
   - name: obj/M_EX590_NM.mset
   source:
   - name: M_EX590.mset
+# cor orb in pooh
+- name: ard/po00.ard #The Hundred Acre Wood (GoA Warp)
+  multi:
+  - name: ard/us/po00.ard
+  - name: ard/fr/po00.ard
+  - name: ard/gr/po00.ard
+  - name: ard/it/po00.ard
+  - name: ard/sp/po00.ard
+  method: binarc
+  source:
+  - name: m_20 #Combine Computer Spawns (Party)
+    type: areadataspawn
+    method: spawnpoint
+    source:
+    - name: m_20.yml
