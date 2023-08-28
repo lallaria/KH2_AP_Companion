@@ -179,6 +179,66 @@ Items:
   Picture: 10
   Icon1: 0
   Icon2: 1
+- Id: 253 #Marketplace Map (Power Boost)
+  Type: Map
+  Flag0: 1
+  Flag1: 4
+  Rank: 0
+  StatEntry: 0
+  Name: 47581
+  Description: 47582
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 61
+  Picture: 34
+  Icon1: 0
+  Icon2: 1
+- Id: 532 #Mansion Map (AP Boost)
+  Type: Map
+  Flag0: 1
+  Flag1: 4
+  Rank: 0
+  StatEntry: 0
+  Name: 47587
+  Description: 47588
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 79
+  Picture: 37
+  Icon1: 0
+  Icon2: 1
+- Id: 586 #Dark Remembrance Map (Magic Boost)
+  Type: Map
+  Flag0: 1
+  Flag1: 4
+  Rank: 0
+  StatEntry: 0
+  Name: 47583
+  Description: 47584
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 84
+  Picture: 35
+  Icon1: 0
+  Icon2: 1
+- Id: 590 #Depths of Remembrance Map (Defense Boost)
+  Type: Map
+  Flag0: 1
+  Flag1: 4
+  Rank: 0
+  StatEntry: 0
+  Name: 47585
+  Description: 47586
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 85
+  Picture: 36
+  Icon1: 0
+  Icon2: 1
 #Shop Item Prices
 - Command: 23
   Description: 33529
