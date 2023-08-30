@@ -25,11 +25,11 @@ assets:
 - method: binarc
   name: 03system.bin
   source:  
-  - method: copy
+  - method: listpatch
     name: cmd
     source:
-    - name: better_stt/cmd.list
-    type: list
+    - name: better_stt/CmdList.yml
+      type: cmd
   - name: item #Implement New Pictures
     type: list
     method: listpatch
