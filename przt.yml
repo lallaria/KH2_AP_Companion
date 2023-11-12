@@ -30,3 +30,36 @@
   SmallHpOrbs: 0
   SmallMoneyOrbs: 0
   SmallMpOrbs: 0
+#CoR Orb Drops
+- Id: 183
+  SmallHpOrbs: 0
+  BigHpOrbs: 0
+  BigMoneyOrbs: 0
+  MediumMoneyOrbs: 0
+  SmallMoneyOrbs: 0
+  SmallMpOrbs: 0
+  BigMpOrbs: 0
+  SmallDriveOrbs: 4
+  BigDriveOrbs: 0
+  Item1: 0
+  Item1Percentage: 0
+  Item2: 0
+  Item2Percentage: 0
+  Item3: 0
+  Item3Percentage: 0
+- Id: 184
+  SmallHpOrbs: 0
+  BigHpOrbs: 0
+  BigMoneyOrbs: 0
+  MediumMoneyOrbs: 0
+  SmallMoneyOrbs: 0
+  SmallMpOrbs: 0
+  BigMpOrbs: 0
+  SmallDriveOrbs: 20
+  BigDriveOrbs: 2
+  Item1: 274
+  Item1Percentage: 10
+  Item2: 0
+  Item2Percentage: 0
+  Item3: 0
+  Item3Percentage: 0
