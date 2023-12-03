@@ -13,7 +13,217 @@ Items:
   Slot: 8
   Picture: 30
   Icon1: 0
-  Icon2: 2
+  Icon2: 2  
+- Id: 112 #Encampment Area Map (Max HP up)
+  Type: Map
+  Flag0: 1
+  Flag1: 8
+  Rank: C
+  StatEntry: 0
+  Name: 34316
+  Description: 34317
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 14
+  Picture: 11
+  Icon1: 0
+  Icon2: 26
+- Id: 113 #Village Area Map (Max MP up)
+  Type: Map
+  Flag0: 1
+  Flag1: 8
+  Rank: C
+  StatEntry: 0
+  Name: 34318
+  Description: 34319
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 15
+  Picture: 11
+  Icon1: 0
+  Icon2: 26
+- Id: 114 #Cornerstone Hill Map (Drive Gague up)
+  Type: Map
+  Flag0: 1
+  Flag1: 13
+  Rank: C
+  StatEntry: 0
+  Name: 34320
+  Description: 34321
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 16
+  Picture: 11
+  Icon1: 0
+  Icon2: 26  
+- Id: 116 #Lilliput Map (Armor Slot up)
+  Type: Map
+  Flag0: 1
+  Flag1: 13
+  Rank: C
+  StatEntry: 0
+  Name: 34324
+  Description: 34325
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 18
+  Picture: 11
+  Icon1: 0
+  Icon2: 26
+- Id: 117 #Building Site Map (Accessory Slot up)
+  Type: Map
+  Flag0: 1
+  Flag1: 13
+  Rank: C
+  StatEntry: 0
+  Name: 34326
+  Description: 34327
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 19
+  Picture: 11
+  Icon1: 0
+  Icon2: 26
+- Id: 118 #Mickey’s House Map (Item Slot up)
+  Type: Map
+  Flag0: 1
+  Flag1: 13
+  Rank: C
+  StatEntry: 0
+  Name: 34328
+  Description: 34329
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 20
+  Picture: 11
+  Icon1: 0
+  Icon2: 26
+- Id: 124 #Starry Hill Map (Megalixir)
+  Type: Map
+  Flag0: 1
+  Flag1: 9
+  Rank: C
+  StatEntry: 0
+  Name: 33540
+  Description: 33541
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 26
+  Picture: 8
+  Icon1: 0
+  Icon2: 0
+- Id: 126 #Rabbits Howse Map (HiPotion)
+  Type: Map
+  Flag0: 1
+  Flag1: 9
+  Rank: C
+  StatEntry: 0
+  Name: 33530
+  Description: 33531
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 28
+  Picture: 2
+  Icon1: 0
+  Icon2: 0
+- Id: 127 #Piglet Howse Map (Potion)
+  Type: Map
+  Flag0: 1
+  Flag1: 9
+  Rank: C
+  StatEntry: 0
+  Name: 33528
+  Description: 33529
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 29
+  Picture: 1
+  Icon1: 0
+  Icon2: 0
+- Id: 128 #Kangas Howse Map (Ether)
+  Type: Map
+  Flag0: 1
+  Flag1: 9
+  Rank: C
+  StatEntry: 0
+  Name: 33532
+  Description: 33533
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 30
+  Picture: 4
+  Icon1: 0
+  Icon2: 0
+- Id: 129 #Spooky Cave Map (Elixir)
+  Type: Map
+  Flag0: 1
+  Flag1: 9
+  Rank: C
+  StatEntry: 0
+  Name: 33534
+  Description: 33535
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 31
+  Picture: 7
+  Icon1: 0
+  Icon2: 0
+- Id: 252 #Pride Rock Map (DriveRecovery)
+  Type: Map
+  Flag0: 1
+  Flag1: 10
+  Rank: C
+  StatEntry: 0
+  Name: 47577
+  Description: 47578
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 60
+  Picture: 9
+  Icon1: 0
+  Icon2: 1
+- Id: 253 #Marketplace Map (Power Boost)
+  Type: Map
+  Flag0: 1
+  Flag1: 4
+  Rank: C
+  StatEntry: 0
+  Name: 47581
+  Description: 47582
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 61
+  Picture: 34
+  Icon1: 0
+  Icon2: 1
+- Id: 367 # Letter (Lucky Emblem)
+  Type: Recipe
+  Flag0: 0
+  Flag1: 0
+  Rank: C
+  StatEntry: 0
+  Name: 47891
+  Description: 47892
+  ShopBuy: 0
+  ShopSell: 0
+  Command: 0
+  Slot: 193
+  Picture: 230
+  Icon1: 0
+  Icon2: 19
 - Id: 460 #DUMMY 13 (DC Key)
   Type: Recipe
   Flag0: 0
@@ -44,126 +254,6 @@ Items:
   Picture: 32
   Icon1: 0
   Icon2: 2
-- Id: 367 # Letter (Lucky Emblem)
-  Type: Recipe
-  Flag0: 0
-  Flag1: 0
-  Rank: C
-  StatEntry: 0
-  Name: 47891
-  Description: 47892
-  ShopBuy: 0
-  ShopSell: 0
-  Command: 0
-  Slot: 193
-  Picture: 230
-  Icon1: 0
-  Icon2: 19
-- Id: 127 #Piglet Howse Map (Potion)
-  Type: Map
-  Flag0: 1
-  Flag1: 9
-  Rank: 0
-  StatEntry: 0
-  Name: 33528
-  Description: 33529
-  ShopBuy: 0
-  ShopSell: 0
-  Command: 0
-  Slot: 29
-  Picture: 1
-  Icon1: 0
-  Icon2: 0
-- Id: 126 #Rabbits Howse Map (HiPotion)
-  Type: Map
-  Flag0: 1
-  Flag1: 9
-  Rank: 0
-  StatEntry: 0
-  Name: 33530
-  Description: 33531
-  ShopBuy: 0
-  ShopSell: 0
-  Command: 0
-  Slot: 28
-  Picture: 2
-  Icon1: 0
-  Icon2: 0
-- Id: 128 #Kangas Howse Map (Ether)
-  Type: Map
-  Flag0: 1
-  Flag1: 9
-  Rank: 0
-  StatEntry: 0
-  Name: 33532
-  Description: 33533
-  ShopBuy: 0
-  ShopSell: 0
-  Command: 0
-  Slot: 30
-  Picture: 4
-  Icon1: 0
-  Icon2: 0
-- Id: 129 #Spooky Cave Map (Elixir)
-  Type: Map
-  Flag0: 1
-  Flag1: 9
-  Rank: 0
-  StatEntry: 0
-  Name: 33534
-  Description: 33535
-  ShopBuy: 0
-  ShopSell: 0
-  Command: 0
-  Slot: 31
-  Picture: 7
-  Icon1: 0
-  Icon2: 0
-- Id: 124 #Starry Hill Map (Megalixir)
-  Type: Map
-  Flag0: 1
-  Flag1: 9
-  Rank: 0
-  StatEntry: 0
-  Name: 33540
-  Description: 33541
-  ShopBuy: 0
-  ShopSell: 0
-  Command: 0
-  Slot: 26
-  Picture: 8
-  Icon1: 0
-  Icon2: 0
-- Id: 512 #Savannah Map (Tent)
-  Type: Map
-  Flag0: 1
-  Flag1: 10
-  Rank: 0
-  StatEntry: 0
-  Name: 34220
-  Description: 34221
-  ShopBuy: 0
-  ShopSell: 0
-  Command: 0
-  Slot: 71
-  Picture: 33
-  Icon1: 0
-  Icon2: 1
-- Id: 252 #Pride Rock Map (DriveRecovery)
-  Type: Map
-  Flag0: 1
-  Flag1: 10
-  Rank: 0
-  StatEntry: 0
-  Name: 47577
-  Description: 47578
-  ShopBuy: 0
-  ShopSell: 0
-  Command: 0
-  Slot: 60
-  Picture: 9
-  Icon1: 0
-  Icon2: 1
 - Id: 511 #Oasis Map (HighDriveRecovery)
   Type: Map
   Flag0: 1
@@ -179,25 +269,25 @@ Items:
   Picture: 10
   Icon1: 0
   Icon2: 1
-- Id: 253 #Marketplace Map (Power Boost)
+- Id: 512 #Savannah Map (Tent)
   Type: Map
   Flag0: 1
-  Flag1: 4
+  Flag1: 10
   Rank: 0
   StatEntry: 0
-  Name: 47581
-  Description: 47582
+  Name: 34220
+  Description: 34221
   ShopBuy: 0
   ShopSell: 0
   Command: 0
-  Slot: 61
-  Picture: 34
+  Slot: 71
+  Picture: 33
   Icon1: 0
   Icon2: 1
 - Id: 532 #Mansion Map (AP Boost)
   Type: Map
   Flag0: 1
-  Flag1: 4
+  Flag1: 2
   Rank: 0
   StatEntry: 0
   Name: 47587
