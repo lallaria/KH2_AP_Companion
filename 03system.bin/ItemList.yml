@@ -26,7 +26,7 @@ Items:
   ShopSell: 0
   Command: 0
   Slot: 14
-  Picture: 11
+  Picture: 15
   Icon1: 0
   Icon2: 26
 - Id: 113 #Village Area Map (Max MP up)
@@ -41,7 +41,7 @@ Items:
   ShopSell: 0
   Command: 0
   Slot: 15
-  Picture: 11
+  Picture: 16
   Icon1: 0
   Icon2: 26
 - Id: 114 #Cornerstone Hill Map (Drive Gague up)
@@ -56,7 +56,7 @@ Items:
   ShopSell: 0
   Command: 0
   Slot: 16
-  Picture: 11
+  Picture: 17
   Icon1: 0
   Icon2: 26  
 - Id: 116 #Lilliput Map (Armor Slot up)
@@ -71,7 +71,7 @@ Items:
   ShopSell: 0
   Command: 0
   Slot: 18
-  Picture: 11
+  Picture: 18
   Icon1: 0
   Icon2: 26
 - Id: 117 #Building Site Map (Accessory Slot up)
@@ -86,7 +86,7 @@ Items:
   ShopSell: 0
   Command: 0
   Slot: 19
-  Picture: 11
+  Picture: 19
   Icon1: 0
   Icon2: 26
 - Id: 118 #Mickey’s House Map (Item Slot up)
@@ -101,7 +101,7 @@ Items:
   ShopSell: 0
   Command: 0
   Slot: 20
-  Picture: 11
+  Picture: 20
   Icon1: 0
   Icon2: 26
 - Id: 124 #Starry Hill Map (Megalixir)

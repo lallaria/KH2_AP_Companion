@@ -24,15 +24,15 @@
   en: Glide
 - id: 20099
   en: Dodge Roll
-- id: 34316
+- id: 0x060C
   en: Max HP up
-- id: 34318
+- id: 0x060E
   en: Max MP up
-- id: 34320
+- id: 0x0610
   en: Drive Gauge up
-- id: 34324
+- id: 0x0614
   en: Armor Slot up
-- id: 34326
+- id: 0x0616
   en: Accessory Slot up
-- id: 34328
+- id: 0x0618
   en: Item Slot up
