@@ -25,14 +25,14 @@
 - id: 20099
   en: Dodge Roll
 - id: 0x060C
-  en: Max HP up
+  en: Maximum HP Increased!
 - id: 0x060E
-  en: Max MP up
+  en: Maximum MP Increased!
 - id: 0x0610
-  en: Drive Gauge up
+  en: Drive Gauge Powered Up!
 - id: 0x0614
-  en: Armor Slot up
+  en: Gained Armor Slot!
 - id: 0x0616
-  en: Accessory Slot up
+  en: Gained Accessory Slot!
 - id: 0x0618
-  en: Item Slot up
+  en: Gained Item Slot!
