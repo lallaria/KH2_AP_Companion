@@ -20,8 +20,8 @@ Items:
   Flag1: 8
   Rank: C
   StatEntry: 0
-  Name: 34316
-  Description: 34317
+  Name: 0x8AE2
+  Description: 0x8AE2
   ShopBuy: 0
   ShopSell: 0
   Command: 0
@@ -35,8 +35,8 @@ Items:
   Flag1: 8
   Rank: C
   StatEntry: 0
-  Name: 34318
-  Description: 34319
+  Name: 0x8AE3
+  Description: 0x8AE3
   ShopBuy: 0
   ShopSell: 0
   Command: 0
@@ -50,8 +50,8 @@ Items:
   Flag1: 13
   Rank: C
   StatEntry: 0
-  Name: 34320
-  Description: 34321
+  Name: 0x8AE4
+  Description: 0x8AE4
   ShopBuy: 0
   ShopSell: 0
   Command: 0
@@ -65,8 +65,8 @@ Items:
   Flag1: 13
   Rank: C
   StatEntry: 0
-  Name: 34324
-  Description: 34325
+  Name: 0x8AE7
+  Description: 0x8AE7
   ShopBuy: 0
   ShopSell: 0
   Command: 0
@@ -80,8 +80,8 @@ Items:
   Flag1: 13
   Rank: C
   StatEntry: 0
-  Name: 34326
-  Description: 34327
+  Name: 0x8AE6
+  Description: 0x8AE6
   ShopBuy: 0
   ShopSell: 0
   Command: 0
@@ -95,8 +95,8 @@ Items:
   Flag1: 13
   Rank: C
   StatEntry: 0
-  Name: 34328
-  Description: 34329
+  Name: 0x8AE5
+  Description: 0x8AE5
   ShopBuy: 0
   ShopSell: 0
   Command: 0
