@@ -2078,6 +2078,11 @@ if ReadByte(Save+0x1E1E) > 0 then
 	elseif PrevPlace == 0x050C then --Hall of the Cornerstone (Light)
 		WriteByte(Save+0x1E1E,3)
 	end
+	if World==12 and Room==5 then
+		WriteByte(Save+0x36B2,1)
+	elseif PrevPlace == 1292 then
+		WriteByte(Save+0x36b2,0)
+	end	
 end
 if Place == 0x040C and Evt == 0x03 then --Hall of the Cornerstone (Dark) right before entering TR.
 	if ReadByte(Save+0x365D)<2 then 
