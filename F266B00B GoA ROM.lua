@@ -2065,7 +2065,7 @@ elseif Place == 0x000D and Events(Null,Null,0x07) then --Back to Their Own World
 elseif Place == 0x050C and Events(Null,Null,0x01) then --The Castle is Secure
 	WriteByte(Save+0x1E1E,3) --Post-Story Save
 elseif Place == 0x2604 and Events(0x7F,0x7F,0x7F) then --Marluxia Defeated
-elseif ReadByte(Save+0x36B2) > 0 and ReadByte(Save+0x1E1E) > 0 and ReadShort(Save+0x1232) == 0x00 then --Proof of Connection, DC Cleared, Terra Locked
+elseif ReadByte(Save+0x1E1E) > 0 and ReadShort(Save+0x1232) == 0x00 then --Proof of Connection, DC Cleared, Terra Locked
 	WriteShort(Save+0x121A,0x11) --Library EVT
 	WriteShort(Save+0x1232,0x02) --Hall of the Cornerstone (Light) EVT
 	WriteShort(Save+0x1238,0x12) --Gummi Hangar EVT
@@ -2081,11 +2081,6 @@ if ReadByte(Save+0x1E1E) > 0 then
 	elseif PrevPlace == 0x050C then --Hall of the Cornerstone (Light)
 		WriteByte(Save+0x1E1E,3)
 	end
-	if World==12 and Room==5 then
-		WriteByte(Save+0x36B2,1)
-	elseif PrevPlace == 1292 then
-		WriteByte(Save+0x36b2,0)
-	end	
 end
 if Place == 0x040C and Evt == 0x03 then --Hall of the Cornerstone (Dark) right before entering TR.
 	if ReadByte(Save+0x365D)<2 then 
