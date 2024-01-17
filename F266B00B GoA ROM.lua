@@ -249,6 +249,15 @@ elseif ReadByte(drive1)==0x77 then
 	WriteByte(drive6, 0x74)
 	WriteByte(drive7, 0x01)
 end
+if Place~=PrevPlace then
+	WriteByte(Save + 0x3607,1)
+end
+if ReadByte(Save + 0x3607)>40 then
+	WriteByte(0x820500-0x56454e,1)
+else if ReadByte(0x820500-0x56454e)==1 then
+	WriteByte(0x820500-0x56454e,0)
+		end
+	end
 end
 
 function NewGame()
