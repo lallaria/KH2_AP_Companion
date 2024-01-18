@@ -85,6 +85,11 @@ elseif GAME_ID == 0x431219CC and ENGINE_TYPE == 'BACKEND' then --PC
 	NxtGauge = 0x48
 	Menu1    = 0x2A0E7D0 - 0x56450E
 	NextMenu = 0x8
+	IsDead = 0x2AE5750-0x56454E
+	KillByte = 0x820500-0x56454E
+	-- if sora is in a form
+	SoraForm=0x9AA5D4-0x56454E
+	ClientDeathLinkFlag=0x820510-0x56454E
 end
 --[[Slot2  = Slot1 - NextSlot
 Slot3  = Slot2 - NextSlot
@@ -249,17 +254,15 @@ elseif ReadByte(drive1)==0x77 then
 	WriteByte(drive6, 0x74)
 	WriteByte(drive7, 0x01)
 end
-if Place~=PrevPlace then
-	WriteByte(Save + 0x3607,1)
+if World~=11 and ReadByte(ClientDeathLinkFlag) ~=0 and ReadInt(IsDead) == 0 and ReadByte(SoraForm) ~= 7 then
+	WriteInt(ClientDeathLinkFlag, 0)
+	WriteInt(KillByte, 0x7F)
+	
 end
-if ReadByte(Save + 0x3607)>40 then
-	WriteByte(0x820500-0x56454e,1)
-else if ReadByte(0x820500-0x56454e)==1 then
-	WriteByte(0x820500-0x56454e,0)
-		end
+if ReadLong(0x68863A) ~= 0 and ReadByte(KillByte) ~= 0 then
+	WriteByte(KillByte, 0)
 	end
 end
-
 function NewGame()
 --Before New Game
 if OnPC and ReadByte(BAR(Sys3,0x6,0x0E5F),OnPC) == 0x19 then --Change Form's Icons in PC from Analog Stick
