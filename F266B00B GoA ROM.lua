@@ -226,6 +226,7 @@ STT()
 AW()
 At()
 Data()
+
 -- use master form in aw
 local offset = 0x56454E
 local drive1 = 0x3F059E - offset
@@ -235,6 +236,7 @@ local drive4 = 0x3FF788 - offset
 local drive5 = 0x3FE3C4 - offset
 local drive6 = 0x3C07CE - offset
 local drive7 = 0x3F05BA - offset
+
 if World==9 then
 	if ReadByte(drive1) == 0x74 then
 		WriteByte(drive1, 0x77)
@@ -254,7 +256,7 @@ elseif ReadByte(drive1)==0x77 then
 	WriteByte(drive6, 0x74)
 	WriteByte(drive7, 0x01)
 end
-if World~=11 and ReadByte(ClientDeathLinkFlag) ~=0 and ReadInt(IsDead) == 0 and ReadByte(SoraForm) ~= 7 then
+if World~=11 and (World~=6 and Room~=0) and ReadByte(ClientDeathLinkFlag) ~=0 and ReadInt(IsDead) == 0 and ReadByte(SoraForm) ~= 7 then
 	WriteInt(ClientDeathLinkFlag, 0)
 	WriteInt(KillByte, 0x7F)
 	
