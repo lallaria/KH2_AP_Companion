@@ -256,7 +256,7 @@ elseif ReadByte(drive1)==0x77 then
 	WriteByte(drive6, 0x74)
 	WriteByte(drive7, 0x01)
 end
-if World~=11 and (World=6 and Room~=0) and ReadByte(ClientDeathLinkFlag) ~=0 and ReadInt(IsDead) == 0 and ReadByte(SoraForm) ~= 7 then
+if World~=11 and (World==6 and Room~=0) and ReadByte(ClientDeathLinkFlag) ~=0 and ReadInt(IsDead) == 0 and ReadByte(SoraForm) ~= 7 then
 	WriteInt(ClientDeathLinkFlag, 0)
 	WriteInt(KillByte, 0x7F)
 	
