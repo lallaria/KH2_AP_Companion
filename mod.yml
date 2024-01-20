@@ -17,13 +17,13 @@ assets:
   - method: listpatch
     name: przt
     source:
-    - name: przt.yml
+    - name: 00battle.bin/przt.yml
       type: przt
     type: list
   - method: listpatch
     name: plrp
     source:
-    - name: PlrpList.yml
+    - name: 00battle.bin/PlrpList.yml
       type: plrp  
     type: List
 - method: binarc
