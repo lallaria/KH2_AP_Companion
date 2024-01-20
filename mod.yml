@@ -33,7 +33,7 @@ assets:
     type: list
     name: cmd
     source:
-    - name: better_stt/CmdList.yml
+    - name: 03system.bin/better_stt/CmdList.yml
       type: cmd
   - name: item #Implement New Pictures
     type: list
@@ -44,7 +44,7 @@ assets:
   - method: copy
     name: shop
     source:
-    - name: modified_shop.bin
+    - name: 03system.bin/modified_shop.bin
     type: unknown41
 - method: binarc
   multi:
@@ -92,23 +92,23 @@ assets:
   - name: limit/sp/trinity_zz.bar
   name: limit/fm/trinity_zz.bar
   source:
-  - name: better_stt/trinity_zz.bar
+  - name: 03system.bin/better_stt/trinity_zz.bar
 - method: copy
   name: obj/B_EX100.mset
   source:
-  - name: better_stt/B_EX100.mset
+  - name: 03system.bin/better_stt/B_EX100.mset
 - method: copy
   name: obj/F_TT010.mset
   source:
-  - name: better_stt/F_TT010.mset
+  - name: 03system.bin/better_stt/F_TT010.mset
 - method: copy
   name: obj/P_EX110.mset
   source:
-  - name: better_stt/P_EX110.mset
+  - name: 03system.bin/better_stt/P_EX110.mset
 - method: copy
   name: obj/W_EX010_RX.mset
   source:
-  - name: better_stt/W_EX010_RX.mset
+  - name: 03system.bin/better_stt/W_EX010_RX.mset
 - name: itempic/item-030.imd #AP Item (Castle Map)
   method: copy
   source:
@@ -208,7 +208,7 @@ assets:
   - method: areadatascript
     name: btl
     source:
-    - name: hb32btl.script
+    - name: AS-Data/hb32btl.script
     type: AreaDataScript
 - method: binarc
   multi:
@@ -222,7 +222,7 @@ assets:
   - method: areadatascript
     name: btl
     source:
-    - name: hb33btl.script
+    - name: AS-Data/hb33btl.script
     type: AreaDataScript
 - method: binarc
   multi:
@@ -236,7 +236,7 @@ assets:
   - method: areadatascript
     name: btl
     source:
-    - name: hb34btl.script
+    - name: AS-Data/hb34btl.script
     type: AreaDataScript
 - method: binarc
   multi:
@@ -250,7 +250,7 @@ assets:
   - method: areadatascript
     name: btl
     source:
-    - name: hb38btl.script
+    - name: AS-Data/hb38btl.script
     type: AreaDataScript
 
 - name: menu/fm/title.2ld
