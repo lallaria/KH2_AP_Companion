@@ -85,6 +85,11 @@ elseif GAME_ID == 0x431219CC and ENGINE_TYPE == 'BACKEND' then --PC
 	NxtGauge = 0x48
 	Menu1    = 0x2A0E7D0 - 0x56450E
 	NextMenu = 0x8
+	IsDead = 0x2AE5750-0x56454E
+	KillByte = 0x820500-0x56454E
+	-- if sora is in a form
+	SoraForm=0x9AA5D4-0x56454E
+	ClientDeathLinkFlag=0x820510-0x56454E
 end
 --[[Slot2  = Slot1 - NextSlot
 Slot3  = Slot2 - NextSlot
@@ -203,6 +208,57 @@ if true then --Define current values for common addresses
 		ARD = ReadLong(ARDPointer)
 	end
 end
+
+if ReadByte(0x840000 - 0x56454E) ~= 0x00 then
+	local _baseText = ReadLong(0x24AA82A)
+	local _textCount = ReadInt(_baseText + 0x04, true)
+	local _firstAddr = _baseText + 0x08
+
+	for i = 1, _textCount do
+		if ReadShort(_firstAddr + i * 0x08, true) == 0x05FE then
+			_offsetText = ReadInt((_firstAddr + i * 0x08) + 0x04, true)
+			_addressText = _baseText + _offsetText
+
+			_messageItem = {}
+			_messagePlayer = {}
+
+			_lenPlayer = 0
+
+			for i = 0, 32 do
+				_messageByte = ReadByte(0x840000 - 0x56454E + i)
+				table.insert(_messageItem, _messageByte)
+
+				if _messageByte == 0x00 then
+					break
+				end
+			end
+
+			for z = 0, 32 do
+				_messageByte = ReadByte(0x840020 - 0x56454E + z)
+				table.insert(_messagePlayer, _messageByte)
+
+				if _messageByte == 0x00 then
+					table.remove(_messagePlayer, z + 1)
+					table.insert(_messagePlayer, 0x57)
+					table.insert(_messagePlayer, 0xAC)
+					table.insert(_messagePlayer, 0x01)
+					_lenPlayer = z + 4
+					break
+				end
+			end
+
+			WriteArray(_addressText, _messagePlayer, true)
+			WriteArray(_addressText + _lenPlayer - 1, _messageItem, true)
+
+			ConsolePrint(_lenPlayer, 1)
+
+			WriteByte(0x840000 - 0x56454E, 0x00)
+			WriteByte(0x840020 - 0x56454E, 0x00)
+			break
+		end
+	end
+end
+
 NewGame()
 GoA()
 TWtNW()
@@ -221,6 +277,7 @@ STT()
 AW()
 At()
 Data()
+
 -- use master form in aw
 local offset = 0x56454E
 local drive1 = 0x3F059E - offset
@@ -230,6 +287,7 @@ local drive4 = 0x3FF788 - offset
 local drive5 = 0x3FE3C4 - offset
 local drive6 = 0x3C07CE - offset
 local drive7 = 0x3F05BA - offset
+
 if World==9 then
 	if ReadByte(drive1) == 0x74 then
 		WriteByte(drive1, 0x77)
@@ -249,17 +307,16 @@ elseif ReadByte(drive1)==0x77 then
 	WriteByte(drive6, 0x74)
 	WriteByte(drive7, 0x01)
 end
-if Place~=PrevPlace then
-	WriteByte(Save + 0x3607,1)
+
+if (World~=11 and (World~=6 or Room~=0)) and ReadByte(ClientDeathLinkFlag) ~=0 and ReadInt(IsDead) == 0 and ReadByte(SoraForm) ~= 7 then
+	WriteInt(ClientDeathLinkFlag, 0)
+	WriteInt(KillByte, 0x7F)
+	
 end
-if ReadByte(Save + 0x3607)>40 then
-	WriteByte(0x820500-0x56454e,1)
-else if ReadByte(0x820500-0x56454e)==1 then
-	WriteByte(0x820500-0x56454e,0)
-		end
+if ReadLong(0x68863A) ~= 0 and ReadByte(KillByte) ~= 0 then
+	WriteByte(KillByte, 0)
 	end
 end
-
 function NewGame()
 --Before New Game
 if OnPC and ReadByte(BAR(Sys3,0x6,0x0E5F),OnPC) == 0x19 then --Change Form's Icons in PC from Analog Stick
