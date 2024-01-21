@@ -208,6 +208,57 @@ if true then --Define current values for common addresses
 		ARD = ReadLong(ARDPointer)
 	end
 end
+
+if ReadByte(0x840000 - 0x56454E) ~= 0x00 then
+	local _baseText = ReadLong(0x24AA82A)
+	local _textCount = ReadInt(_baseText + 0x04, true)
+	local _firstAddr = _baseText + 0x08
+
+	for i = 1, _textCount do
+		if ReadShort(_firstAddr + i * 0x08, true) == 0x05FE then
+			_offsetText = ReadInt((_firstAddr + i * 0x08) + 0x04, true)
+			_addressText = _baseText + _offsetText
+
+			_messageItem = {}
+			_messagePlayer = {}
+
+			_lenPlayer = 0
+
+			for i = 0, 32 do
+				_messageByte = ReadByte(0x840000 - 0x56454E + i)
+				table.insert(_messageItem, _messageByte)
+
+				if _messageByte == 0x00 then
+					break
+				end
+			end
+
+			for z = 0, 32 do
+				_messageByte = ReadByte(0x840020 - 0x56454E + z)
+				table.insert(_messagePlayer, _messageByte)
+
+				if _messageByte == 0x00 then
+					table.remove(_messagePlayer, z + 1)
+					table.insert(_messagePlayer, 0x57)
+					table.insert(_messagePlayer, 0xAC)
+					table.insert(_messagePlayer, 0x01)
+					_lenPlayer = z + 4
+					break
+				end
+			end
+
+			WriteArray(_addressText, _messagePlayer, true)
+			WriteArray(_addressText + _lenPlayer - 1, _messageItem, true)
+
+			ConsolePrint(_lenPlayer, 1)
+
+			WriteByte(0x840000 - 0x56454E, 0x00)
+			WriteByte(0x840020 - 0x56454E, 0x00)
+			break
+		end
+	end
+end
+
 NewGame()
 GoA()
 TWtNW()
@@ -256,6 +307,7 @@ elseif ReadByte(drive1)==0x77 then
 	WriteByte(drive6, 0x74)
 	WriteByte(drive7, 0x01)
 end
+
 if (World~=11 and (World~=6 or Room~=0)) and ReadByte(ClientDeathLinkFlag) ~=0 and ReadInt(IsDead) == 0 and ReadByte(SoraForm) ~= 7 then
 	WriteInt(ClientDeathLinkFlag, 0)
 	WriteInt(KillByte, 0x7F)
