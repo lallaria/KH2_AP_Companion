@@ -209,7 +209,7 @@ if true then --Define current values for common addresses
 	end
 end
 
-if ReadByte(0x840000 - 0x56454E) ~= 0x00 then
+--[[if ReadByte(0x840000 - 0x56454E) ~= 0x00 then
 	local _baseText = ReadLong(0x24AA82A)
 	local _textCount = ReadInt(_baseText + 0x04, true)
 	local _firstAddr = _baseText + 0x08
@@ -257,7 +257,7 @@ if ReadByte(0x840000 - 0x56454E) ~= 0x00 then
 			break
 		end
 	end
-end
+end--]]
 
 NewGame()
 GoA()
