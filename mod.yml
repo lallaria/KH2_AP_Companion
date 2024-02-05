@@ -7,6 +7,10 @@ assets:
   method: copy
   source:
   - name: F266B00B GoA ROM.lua
+#- name: scripts/deathLua.lua
+#  method: copy
+#  source:
+#  - name: deathLua.lua
 #- name: field2d/us/zz0field.2dd
 #  multi:
 #    - name: field2d/us/al0field.2dd
@@ -30,10 +34,6 @@ assets:
 #  method: copy
 #  source:
 #  - name: field2d/us/zz0field.2dd
-- name: scripts/deathLua.lua
-  method: copy
-  source:
-  - name: deathLua.lua
 - method: binarc
   name: 00battle.bin
   source:
