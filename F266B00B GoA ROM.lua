@@ -90,6 +90,15 @@ elseif GAME_ID == 0x431219CC and ENGINE_TYPE == 'BACKEND' then --PC
 	-- if sora is in a form
 	SoraForm=0x9AA5D4-0x56454E
 	ClientDeathLinkFlag=0x820510-0x56454E
+	-- use master form in aw
+	offset = 0x56454E
+	drive1 = 0x3F059E - offset
+	drive2 = 0x3FF734 - offset
+	drive3 = 0x3E107C - offset
+	drive4 = 0x3FF788 - offset
+	drive5 = 0x3FE3C4 - offset
+	drive6 = 0x3C07CE - offset
+	drive7 = 0x3F05BA - offset
 end
 --[[Slot2  = Slot1 - NextSlot
 Slot3  = Slot2 - NextSlot
@@ -277,44 +286,52 @@ STT()
 AW()
 At()
 Data()
+RemoveDriveRestrictions()
+DeathLink()
+MiniGameSkip()
 
--- use master form in aw
-local offset = 0x56454E
-local drive1 = 0x3F059E - offset
-local drive2 = 0x3FF734 - offset
-local drive3 = 0x3E107C - offset
-local drive4 = 0x3FF788 - offset
-local drive5 = 0x3FE3C4 - offset
-local drive6 = 0x3C07CE - offset
-local drive7 = 0x3F05BA - offset
-
-if World==9 then
-	if ReadByte(drive1) == 0x74 then
-		WriteByte(drive1, 0x77)
-		WriteShort(drive2, 0x820F)
-		WriteByte(drive3, 0x72)
-		WriteShort(drive4, 0x820F)
-		WriteByte(drive5, 0x7D)
-		WriteByte(drive6, 0x7D)
-		WriteByte(drive7, 0x03)
-		end
-elseif ReadByte(drive1)==0x77 then
-	WriteByte(drive1, 0x74)
-	WriteShort(drive2, 0x850F)
-	WriteByte(drive3, 0x78)
-	WriteShort(drive4, 0x850F)
-	WriteByte(drive5, 0x74)
-	WriteByte(drive6, 0x74)
-	WriteByte(drive7, 0x01)
+function MiniGameSkip()
+	if World==9  and Room~=9 then
+		DebugFlagClearMinigame = ReadLong(0x2AE3488 - offset)+0xB10
+		WriteByte(DebugFlagClearMinigame, 1, true)
+	end
 end
 
-if (World~=11 and (World~=6 or Room~=0)) and ReadByte(ClientDeathLinkFlag) ~=0 and ReadInt(IsDead) == 0 and ReadByte(0x24AA282)~=1 then
-    WriteInt(ClientDeathLinkFlag, 0)
-    WriteInt(KillByte, 0x7F)
+function DeathLink()
+	if (World~=11 and (World~=6 or Room~=0)) and ReadByte(ClientDeathLinkFlag) ~=0 and ReadInt(IsDead) == 0 and ReadByte(0x24AA282)~=1 then
+		WriteInt(ClientDeathLinkFlag, 0)
+		WriteInt(KillByte, 0x7F)
+	
+	end
 
+	if ReadLong(0x68863A) ~= 0 and ReadByte(KillByte) ~= 0 then
+		WriteByte(KillByte, 0)
+		
+	end
 end
-if ReadLong(0x68863A) ~= 0 and ReadByte(KillByte) ~= 0 then
-	WriteByte(KillByte, 0)
+
+
+
+function RemoveDriveRestrictions()
+	-- if world == 100aw then give ability to go into drive
+	if World==9 or Room==33 then
+		if ReadByte(drive1) == 0x74 then
+			WriteByte(drive1, 0x77)
+			WriteShort(drive2, 0x820F)
+			WriteByte(drive3, 0x72)
+			WriteShort(drive4, 0x820F)
+			WriteByte(drive5, 0x7D)
+			WriteByte(drive6, 0x7D)
+			WriteByte(drive7, 0x03)
+			end
+	elseif ReadByte(drive1)==0x77 then
+		WriteByte(drive1, 0x74)
+		WriteShort(drive2, 0x850F)
+		WriteByte(drive3, 0x78)
+		WriteShort(drive4, 0x850F)
+		WriteByte(drive5, 0x74)
+		WriteByte(drive6, 0x74)
+		WriteByte(drive7, 0x01)
 	end
 end
 function NewGame()
