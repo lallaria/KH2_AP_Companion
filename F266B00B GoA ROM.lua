@@ -290,6 +290,8 @@ RemoveDriveRestrictions()
 DeathLink()
 MiniGameSkip()
 
+end
+
 function MiniGameSkip()
 	if World==9  and Room~=9 then
 		DebugFlagClearMinigame = ReadLong(0x2AE3488 - offset)+0xB10
