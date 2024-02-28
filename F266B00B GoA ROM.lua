@@ -288,16 +288,16 @@ At()
 Data()
 RemoveDriveRestrictions()
 DeathLink()
-MiniGameSkip()
+--MiniGameSkip()
 
 end
 
-function MiniGameSkip()
-	if World==9  and Room~=9 then
-		DebugFlagClearMinigame = ReadLong(0x2AE3488 - offset)+0xB10
-		WriteByte(DebugFlagClearMinigame, 1, true)
-	end
-end
+--function MiniGameSkip()
+--	if World==9  and Room~=9 then
+--		DebugFlagClearMinigame = ReadLong(0x2AE3488 - offset)+0xB10
+--		WriteByte(DebugFlagClearMinigame, 1, true)
+--	end
+--end
 
 function DeathLink()
 	if (World~=11 and (World~=6 or Room~=0)) and ReadByte(ClientDeathLinkFlag) ~=0 and ReadInt(IsDead) == 0 and ReadByte(0x24AA282)~=1 then

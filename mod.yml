@@ -297,13 +297,13 @@ assets:
   method: copy
   source:
   - name: title_2ld7.png
-#obj
-- method: copy
-  name: obj/M_EX590.mset
-  multi:
-  - name: obj/M_EX590_NM.mset
-  source:
-  - name: M_EX590.mset
+#obj bulkies?
+#- method: copy
+#  name: obj/M_EX590.mset
+#  multi:
+#  - name: obj/M_EX590_NM.mset
+#  source:
+#  - name: M_EX590.mset
 # cor orb in pooh
 - name: ard/po00.ard #The Hundred Acre Wood (GoA Warp)
   multi:
