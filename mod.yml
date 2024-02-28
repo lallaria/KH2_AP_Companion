@@ -43,7 +43,7 @@ assets:
     - name: 00battle.bin/PlrpList.yml
       type: plrp  
     type: List
-#  - method: listpatch
+#  - method: listpatch #Faster Urns and CoR Orb drops a bunch of drive orbs
 #    name: przt
 #    source:
 #    - name: 00battle.bin/przt.yml
@@ -258,14 +258,13 @@ assets:
     method: spawnpoint
     source:
     - name: m_20.yml
-#obj yeah this is quicker bulky vendor RC
-#- method: copy
+#- method: copy #obj yeah this is quicker bulky vendor RC
 #  name: obj/M_EX590.mset
 #  multi:
 #  - name: obj/M_EX590_NM.mset
 #  source:
 #  - name: M_EX590.mset
-#- method: binarc
+#- method: binarc #Carpet Escape skip
 #  multi:
 #  - name: ard/us/al11.ard
 #  - name: ard/fr/al11.ard
@@ -279,7 +278,7 @@ assets:
 #    source:
 #    - name: skip_carpet_escape.script
 #    type: areadatascript
-#- method: copy
+#- method: copy #Wardrobe doesnt wake up
 #  name: obj/N_BB080_BTL.mset
 #  source:
 #  - name: wardrobe_skip.mset
