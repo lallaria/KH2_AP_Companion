@@ -115,21 +115,37 @@ assets:
   source:
   - name: 03system.bin/better_stt/W_EX010_RX.mset
 #item images
+- name: itempic/item-030.imd #AP Item (Castle Map)
+  method: copy
+  source:
+  - name: itempic/item-030.imd
 - name: remastered/itempic/item-030.imd/-0.dds #AP Item (Castle Map)
   platform: pc
   method: copy
   source:
   - name: remastered/itempic/AP.dds
+- name: itempic/item-031.imd #DC Key (Dummy 13)
+  method: copy
+  source:
+  - name: itempic/item-031.imd
 - name: remastered/itempic/item-031.imd/-0.dds #DC Key (Dummy 13)
   platform: pc
   method: copy
   source:
   - name: remastered/itempic/DC.dds
+- name: itempic/item-032.imd #Bounty (Dummy 14)
+  method: copy
+  source:
+  - name: itempic/item-032.imd
 - name: remastered/itempic/item-032.imd/-0.dds #Bounty (Dummy 14)
   platform: pc
   method: copy
   source:
   - name: remastered/itempic/Bounty.dds
+- name: itempic/item-230.imd #Lucky Emblem (Letter)
+  method: copy
+  source:
+  - name: itempic/item-230.imd
 - name: remastered/itempic/item-230.imd/-0.dds #Lucky Emblem (Letter)
   platform: pc
   method: copy
