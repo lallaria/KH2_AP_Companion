@@ -38,17 +38,17 @@ assets:
   name: 00battle.bin
   source:
   - method: listpatch
-    name: przt
-    source:
-    - name: 00battle.bin/przt.yml
-      type: przt
-    type: list
-  - method: listpatch
     name: plrp
     source:
     - name: 00battle.bin/PlrpList.yml
       type: plrp  
     type: List
+#  - method: listpatch #Faster Urns and CoR Orb drops a bunch of drive orbs
+#    name: przt
+#    source:
+#    - name: 00battle.bin/przt.yml
+#      type: przt
+#    type: list
 - method: binarc
   name: 03system.bin
   source:  
@@ -71,20 +71,6 @@ assets:
     type: unknown41
 - method: binarc
   multi:
-  - name: ard/us/al11.ard
-  - name: ard/fr/al11.ard
-  - name: ard/gr/al11.ard
-  - name: ard/it/al11.ard
-  - name: ard/sp/al11.ard
-  name: ard/al11.ard
-  source:
-  - method: areadatascript
-    name: evt
-    source:
-    - name: skip_carpet_escape.script
-    type: areadatascript
-- method: binarc
-  multi:
   - name: msg/jp/ca.bar
   - name: msg/fr/ca.bar
   - name: msg/gr/ca.bar
@@ -102,10 +88,6 @@ assets:
   name: libretto-ca.bar
   source:
   - name: map_skip/libretto-ca.bar
-- method: copy
-  name: obj/N_BB080_BTL.mset
-  source:
-  - name: wardrobe_skip.mset
 - method: copy
   multi:
   - name: limit/us/trinity_zz.bar
@@ -132,64 +114,55 @@ assets:
   name: obj/W_EX010_RX.mset
   source:
   - name: 03system.bin/better_stt/W_EX010_RX.mset
+#item images
 - name: itempic/item-030.imd #AP Item (Castle Map)
   method: copy
   source:
   - name: itempic/item-030.imd
-- name: itempic/item-031.imd #DC Key (Dummy 13)
-  method: copy
-  source:
-  - name: itempic/item-031.imd
-- name: itempic/item-032.imd #Bounty (Dummy 14)
-  method: copy
-  source:
-  - name: itempic/item-032.imd
-- name: itempic/item-230.imd #Lucky Emblem (Letter)
-  method: copy
-  source:
-  - name: itempic/item-230.imd
-#PC
 - name: remastered/itempic/item-030.imd/-0.dds #AP Item (Castle Map)
   platform: pc
   method: copy
   source:
   - name: remastered/itempic/AP.dds
+- name: itempic/item-031.imd #DC Key (Dummy 13)
+  method: copy
+  source:
+  - name: itempic/item-031.imd
 - name: remastered/itempic/item-031.imd/-0.dds #DC Key (Dummy 13)
   platform: pc
   method: copy
   source:
   - name: remastered/itempic/DC.dds
+- name: itempic/item-032.imd #Bounty (Dummy 14)
+  method: copy
+  source:
+  - name: itempic/item-032.imd
 - name: remastered/itempic/item-032.imd/-0.dds #Bounty (Dummy 14)
   platform: pc
   method: copy
   source:
   - name: remastered/itempic/Bounty.dds
+- name: itempic/item-230.imd #Lucky Emblem (Letter)
+  method: copy
+  source:
+  - name: itempic/item-230.imd
 - name: remastered/itempic/item-230.imd/-0.dds #Lucky Emblem (Letter)
   platform: pc
   method: copy
   source:
   - name: remastered/itempic/LE.dds
+- name: remastered/itempic/item-229.imd/-0.dds #Game Options (Poster)
+  platform: pc
+  method: copy
+  source:
+  - name: remastered/itempic/insertlogic.dds
+#puzzlepieces
+- name: remastered/obj/F_EX260.a.us/-0.dds #Puzzle Pieces
+  platform: pc
+  method: copy
+  source:
+  - name: remastered/itempic/pp.dds
 #Text
-- name: msg/jp/sys.bar
-  platform: ps2
-  method: binarc
-  source:
-  - name: sys
-    type: list
-    method: kh2msg
-    source:
-    - name: msg/sys.yml
-      language: en
-- name: msg/jp/eh.bar
-  platform: ps2
-  method: binarc
-  source:
-  - name: eh
-    type: list
-    method: kh2msg
-    source:
-    - name: msg/eh.yml
-      language: en
 - name: msg/us/sys.bar
   multi:
   - name: msg/fr/sys.bar
@@ -275,7 +248,7 @@ assets:
     source:
     - name: AS-Data/hb38btl.script
     type: AreaDataScript
-
+#faster custom title screen
 - name: menu/fm/title.2ld
   multi:
   - name: menu/fr/title.2ld
@@ -297,13 +270,6 @@ assets:
   method: copy
   source:
   - name: title_2ld7.png
-#obj bulkies?
-#- method: copy
-#  name: obj/M_EX590.mset
-#  multi:
-#  - name: obj/M_EX590_NM.mset
-#  source:
-#  - name: M_EX590.mset
 # cor orb in pooh
 - name: ard/po00.ard #The Hundred Acre Wood (GoA Warp)
   multi:
@@ -319,3 +285,27 @@ assets:
     method: spawnpoint
     source:
     - name: m_20.yml
+#- method: copy #obj yeah this is quicker bulky vendor RC
+#  name: obj/M_EX590.mset
+#  multi:
+#  - name: obj/M_EX590_NM.mset
+#  source:
+#  - name: M_EX590.mset
+#- method: binarc #Carpet Escape skip
+#  multi:
+#  - name: ard/us/al11.ard
+#  - name: ard/fr/al11.ard
+#  - name: ard/gr/al11.ard
+#  - name: ard/it/al11.ard
+#  - name: ard/sp/al11.ard
+#  name: ard/al11.ard
+#  source:
+#  - method: areadatascript
+#    name: evt
+#    source:
+#    - name: skip_carpet_escape.script
+#    type: areadatascript
+#- method: copy #Wardrobe doesnt wake up
+#  name: obj/N_BB080_BTL.mset
+#  source:
+#  - name: wardrobe_skip.mset
