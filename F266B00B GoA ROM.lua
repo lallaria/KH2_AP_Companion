@@ -1046,7 +1046,7 @@ if Place==786 and World==18 and Room==3 and ReadByte(Save+0x35C1) < 1 and ReadBy
 	Warp(18,1)
 end
 -- not letting promise charm win without proofs
-if ReadByte(Save+0x3694) > 0 and ReadByte(Save+0x36B3) < 1 then --nonexistance & Promise Charm
+if ReadByte(Save+0x3694) > 0 and ReadByte(Save+0x36B2) > 0 and ReadByte(Save+0x36B3) > 0 and ReadByte(Save+0x36B4) > 0 then --nonexistance & Promise Charm
 	if World==18 and Room==27 and Place==6930 then
 		Warp(2,33)
 	end	
