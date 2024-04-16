@@ -1046,18 +1046,15 @@ if Place==786 and World==18 and Room==3 and ReadByte(Save+0x35C1) < 1 and ReadBy
 	Warp(18,1)
 end
 -- not letting promise charm win without proofs
-
-if ReadByte(Save+0x3694) > 0 and ReadByte(Save+0x36B2) < 1 and ReadByte(Save+0x36B3) < 1 and ReadByte(Save+0x36B4) < 1 then --nonexistance & Promise Charm
-	
-	if World==18 and Room==27 and Place==6930 then
-		Warp(2,33)
-	end	
-elseif Place==6930 then
+if World==18 and Room==27 and Place==6930 then
+	if ReadByte(Save+0x36B2) > 0 and ReadByte(Save+0x36B3) > 0 and ReadByte(Save+0x36B4) > 0 then
 	--Warp into the appropriate World, Room, Door, Map, Btl, Evt
-	Warp(18,25,0,70,70,70)
+		Warp(18,25,0,70,70,70)
+	else
+		Warp(2,33)
+	end
 end
 end
-
 function LoD()
 --Data Xigbar -> The Land of Dragons
 if Place == 0x1A04 then
