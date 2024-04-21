@@ -315,8 +315,9 @@ end
 
 
 function RemoveDriveRestrictions()
+	-- if room is before datas and place is before datas and they are not in stt
 	-- if world == 100aw then give ability to go into drive
-	if World==9 or Room==33 then
+	if World==9 or (Room==33 and Place==8450 and ReadShort(Save+0x1CF9)<1) then
 		if ReadByte(drive1) == 0x74 then
 			WriteByte(drive1, 0x77)
 			WriteShort(drive2, 0x820F)
