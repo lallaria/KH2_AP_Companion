@@ -249,27 +249,27 @@ assets:
     - name: AS-Data/hb38btl.script
     type: AreaDataScript
 #faster custom title screen
-- name: menu/fm/title.2ld
-  multi:
-  - name: menu/fr/title.2ld
-  - name: menu/gr/title.2ld
-  - name: menu/it/title.2ld
-  - name: menu/sp/title.2ld
-  - name: menu/uk/title.2ld
-  - name: menu/us/title.2ld
-  method: copy
-  source:
-  - name: title_new.2ld
-- name: remastered/menu/fr/title.2ld/FR_title_2ld7.png
-  multi:
-  - name: remastered/menu/gr/title.2ld/GR_title_2ld7.png
-  - name: remastered/menu/it/title.2ld/IT_title_2ld7.png
-  - name: remastered/menu/sp/title.2ld/SP_title_2ld7.png
-  - name: remastered/menu/uk/title.2ld/UK_title_2ld7.png
-  - name: remastered/menu/us/title.2ld/US_title_2ld7.png
-  method: copy
-  source:
-  - name: title_2ld7.png
+#- name: menu/fm/title.2ld
+#  multi:
+#  - name: menu/fr/title.2ld
+#  - name: menu/gr/title.2ld
+#  - name: menu/it/title.2ld
+#  - name: menu/sp/title.2ld
+#  - name: menu/uk/title.2ld
+#  - name: menu/us/title.2ld
+#  method: copy
+#  source:
+#  - name: title_new.2ld
+#- name: remastered/menu/fr/title.2ld/FR_title_2ld7.png
+  #multi:
+#- name: remastered/menu/gr/title.2ld/GR_title_2ld7.png
+#- name: remastered/menu/it/title.2ld/IT_title_2ld7.png
+#- name: remastered/menu/sp/title.2ld/SP_title_2ld7.png
+# - name: remastered/menu/uk/title.2ld/UK_title_2ld7.png
+# - name: remastered/menu/us/title.2ld/US_title_2ld7.png
+#  method: copy
+#  source:
+#  - name: title_2ld7.png
 # cor orb in pooh
 - name: ard/po00.ard #The Hundred Acre Wood (GoA Warp)
   multi:
