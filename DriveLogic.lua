@@ -15,6 +15,7 @@ function _OnFrame()
                 drive7=0x3F1CEA
                 GameVersion=1
                 Now = 0x0716DF8
+                Save = 0x09A92F0
             end
             if ReadString(0x09A9830,4) == 'KH2J' then --Steam Global
                 drive1=0x3F29EE
@@ -26,6 +27,7 @@ function _OnFrame()
                 drive7=0x3F2A0A   
                 GameVersion=2
                 Now = 0x0717008
+                Save = 0x09A9830
             end
         end
         if GameVersion==0 then
