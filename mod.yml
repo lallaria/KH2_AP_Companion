@@ -11,33 +11,6 @@ assets:
   method: copy
   source:
   - name: DriveLogic.lua
-#- name: scripts/deathLua.lua
-#  method: copy
-#  source:
-#  - name: deathLua.lua
-#- name: field2d/us/zz0field.2dd
-#  multi:
-#    - name: field2d/us/al0field.2dd
-#    - name: field2d/us/bb0field.2dd
-#    - name: field2d/us/ca0field.2dd
-#    - name: field2d/us/dc0field.2dd
-#    - name: field2d/us/di0field.2dd
-#    - name: field2d/us/eh0field.2dd
-#    - name: field2d/us/es0field.2dd
-#    - name: field2d/us/hb0field.2dd
-#    - name: field2d/us/he0field.2dd
-#    - name: field2d/us/lk0field.2dd
-#    - name: field2d/us/lm0field.2dd
-#    - name: field2d/us/mu0field.2dd
-#    - name: field2d/us/nm0field.2dd
-#    - name: field2d/us/po0field.2dd
-#    - name: field2d/us/tr0field.2dd
-#    - name: field2d/us/tt0field.2dd
-#    - name: field2d/us/wi0field.2dd
-#    - name: field2d/us/wm0field.2dd
-#  method: copy
-#  source:
-#  - name: field2d/us/zz0field.2dd
 - method: binarc
   name: 00battle.bin
   source:
@@ -47,12 +20,6 @@ assets:
     - name: 00battle.bin/PlrpList.yml
       type: plrp  
     type: List
-#  - method: listpatch #Faster Urns and CoR Orb drops a bunch of drive orbs
-#    name: przt
-#    source:
-#    - name: 00battle.bin/przt.yml
-#      type: przt
-#    type: list
 - method: binarc
   name: 03system.bin
   source:  
@@ -289,27 +256,3 @@ assets:
     method: spawnpoint
     source:
     - name: m_20.yml
-#- method: copy #obj yeah this is quicker bulky vendor RC
-#  name: obj/M_EX590.mset
-#  multi:
-#  - name: obj/M_EX590_NM.mset
-#  source:
-#  - name: M_EX590.mset
-#- method: binarc #Carpet Escape skip
-#  multi:
-#  - name: ard/us/al11.ard
-#  - name: ard/fr/al11.ard
-#  - name: ard/gr/al11.ard
-#  - name: ard/it/al11.ard
-#  - name: ard/sp/al11.ard
-#  name: ard/al11.ard
-#  source:
-#  - method: areadatascript
-#    name: evt
-#    source:
-#    - name: skip_carpet_escape.script
-#    type: areadatascript
-#- method: copy #Wardrobe doesnt wake up
-#  name: obj/N_BB080_BTL.mset
-#  source:
-#  - name: wardrobe_skip.mset
