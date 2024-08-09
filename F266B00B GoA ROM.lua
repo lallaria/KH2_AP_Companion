@@ -1606,7 +1606,7 @@ if Place == 0x1A04 then
 		elseif Progress == 5 then --After Talking to Yen Sid
 			WarpRoom = 0x1B
 		elseif Progress == 6 then --Post 1st Visit
-			WarpRoom = 0x02
+			WarpRoom = 0x1A
 		elseif Progress == 7 then --2nd Visit
 			WriteShort(BAR(ARD,0x0A,GoAOffset+0x0EE),0x12,OnPC) --Start in TWtNW
 			WarpRoom = 0x40
@@ -1615,7 +1615,7 @@ if Place == 0x1A04 then
 		elseif Progress == 9 then --After Sandlot Nobodies II
 			WarpRoom = 0x02
 		elseif Progress == 10 then --Post 2nd Visit
-			WarpRoom = 0x02
+			WarpRoom = 0x1A
 		elseif Progress == 11 then --3rd Visit
 			WarpRoom = 0x77
 		elseif Progress == 12 then --[Before The Old Mansion Nobodies, After The Old Mansion Nobodies]
