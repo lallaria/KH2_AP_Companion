@@ -128,11 +128,11 @@ assets:
   source:
   - name: remastered/itempic/insertlogic.dds
 #puzzlepieces
-- name: remastered/obj/F_EX260.a.us/-0.dds #Puzzle Pieces
-  platform: pc
-  method: copy
-  source:
-  - name: remastered/itempic/pp.dds
+#- name: remastered/obj/F_EX260.a.us/-0.dds #Puzzle Pieces
+#  platform: pc
+#  method: copy
+#  source:
+#  - name: remastered/itempic/pp.dds
 #Text
 - name: msg/us/sys.bar
   multi:

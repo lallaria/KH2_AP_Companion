@@ -56,126 +56,135 @@ if (GAME_ID == 0xF266B00B or GAME_ID == 0xFAF99301) and ENGINE_TYPE == "ENGINE" 
 	MSN = 0x04FA440
 elseif GAME_ID == 0x431219CC and ENGINE_TYPE == 'BACKEND' then --PC
 	OnPC = true
-	if ReadString(0x09A92F0,4) == 'KH2J' then --EGS
+	if ReadString(0x9A9330,4) == 'KH2J' then --EGS
 		GameVersion = 2
 		print('GoA Epic Version')
 		Now = 0x0716DF8
-		Sve = 0x2A0BF80
-		Save = 0x09A92F0
-		Obj0Pointer = 0x2A24A70
-		Sys3Pointer = 0x2AE5890
-		Btl0Pointer = 0x2AE5898
-		ARDPointer = 0x2A0F268
-		Music = 0x0ABA784
-		Pause = 0x0ABB2B8
-		React = 0x2A10BA2
-		Cntrl = 0x2A16C28
-		Timer = 0x0ABB290
-		Songs = 0x0B657B4
+		Sve = 0x2A0BFC0
+		Save = 0x09A9330
+		Obj0Pointer = 0x2A24AB0
+		Sys3Pointer = 0x2AE58D0
+		Btl0Pointer = 0x2AE58D8
+		ARDPointer = 0x2A0F2A8
+		Music = 0x0ABA7C4
+		Pause = 0x0ABB2F8
+		React = 0x2A10BE2
+		Cntrl = 0x2A16C68
+		Timer = 0x0ABB2D0
+		Songs = 0x0B657F4
 		GScre = 0x072AEB0
 		GMdal = 0x072B044
-		GKill = 0x0AF6B86
+		GKill = 0x0AF6BC6
 		CamTyp = 0x0718A98
 		GamSpd = 0x0717214
-		CutNow = 0x0B649D8
-		CutLen = 0x0B649F4
-		CutSkp = 0x0B649DC
-		BtlTyp = 0x2A10E44
-		BtlEnd = 0x2A0F720
+		CutNow = 0x0B64A18
+		CutLen = 0x0B64A34
+		CutSkp = 0x0B64A1C
+		BtlTyp = 0x2A10E84
+		BtlEnd = 0x2A0F760
 		TxtBox = 0x074DCB0
-		DemCln = 0x2A0F2F4
-		Slot1    = 0x2A22FD8
+		DemCln = 0x2A0F334
+		Slot1    = 0x2A23018
 		NextSlot = 0x278
-		Point1   = 0x2A0F488
+		Point1   = 0x2A0F4C8
 		NxtPoint = 0x50
-		Gauge1   = 0x2A0F578
+		Gauge1   = 0x2A0F5B8
 		NxtGauge = 0x48
-		Menu1    = 0x2A10B50
+		Menu1    = 0x2A10B90
 		NextMenu = 0x8
 		Obj0 = ReadLong(Obj0Pointer)
 		Sys3 = ReadLong(Sys3Pointer)
 		Btl0 = ReadLong(Btl0Pointer)
-		MSN = 0x0BF2C40
-	elseif ReadString(0x09A9830,4) == 'KH2J' then --Steam Global
+		MSN = 0x0BF2C80
+	elseif ReadString(0x9A98B0,4) == 'KH2J' then --Steam Global
 		GameVersion = 3
 		print('GoA Steam Global Version')
 		Now = 0x0717008
-		Sve = 0x2A0C4C0
-		Save = 0x09A9830
-		Obj0Pointer = 0x2A24FB0
-		Sys3Pointer = 0x2AE5DD0
-		Btl0Pointer = 0x2AE5DD8
-		ARDPointer = 0x2A0F7A8
-		Music = 0x0ABACC4
-		Pause = 0x0ABB7F8
-		React = 0x2A110E2
-		Cntrl = 0x2A17168
-		Timer = 0x0ABB7D0
-		Songs = 0x0B65CF4
+		Sve = 0x2A0C540
+		Save = 0x09A98B0
+		Obj0Pointer = 0x2A25030
+		Sys3Pointer = 0x2AE5E50
+		Btl0Pointer = 0x2AE5E58
+		ARDPointer = 0x2A0F828
+		Music = 0x0ABAD44
+		Pause = 0x0ABB878
+		React = 0x2A11162
+		Cntrl = 0x2A171E8
+		Timer = 0x0ABB850
+		Songs = 0x0B65D44
 		GScre = 0x072B130
 		GMdal = 0x072B2C4
-		GKill = 0x0AF70C6
+		GKill = 0x0AF7146
 		CamTyp = 0x0718CA8
 		GamSpd = 0x0717424
-		CutNow = 0x0B64F18
-		CutLen = 0x0B64F34
-		CutSkp = 0x0B64F1C
-		BtlTyp = 0x2A11384
-		BtlEnd = 0x2A0FC60
+		CutNow = 0x0B64F98
+		CutLen = 0x0B64FB4
+		CutSkp = 0x0B64F9C
+		BtlTyp = 0x2A11404
+		BtlEnd = 0x2A0FCE0
 		TxtBox = 0x074DF20
-		DemCln = 0x2A0F834
-		Slot1    = 0x2A23518
+		DemCln = 0x2A0F8B4
+		Slot1    = 0x2A23598
 		NextSlot = 0x278
-		Point1   = 0x2A0F9C8
+		Point1   = 0x2A0FA48
 		NxtPoint = 0x50
-		Gauge1   = 0x2A0FAB8
+		Gauge1   = 0x2A0FB38
 		NxtGauge = 0x48
-		Menu1    = 0x2A11090
+		Menu1    = 0x2A11110
 		NextMenu = 0x8
 		Obj0 = ReadLong(Obj0Pointer)
 		Sys3 = ReadLong(Sys3Pointer)
 		Btl0 = ReadLong(Btl0Pointer)
-		MSN = 0x0BF3340
-	elseif ReadString(0x09A8830,4) == 'KH2J' then --Steam JP
+		MSN = 0x0BF33C0
+	elseif ReadString(0x9A98B0,4) == 'KH2J' then --Steam JP (same as Global for now)
 		GameVersion = 4
 		print('GoA Steam JP Version')
-		Now = 0x0716008
-		Sve = 0x2A0B4C0
-		Save = 0x09A8830
-		Obj0Pointer = 0x2A23FB0
-		Sys3Pointer = 0x2AE4DD0
-		Btl0Pointer = 0x2AE4DD8
-		ARDPointer = 0x2A0E7A8
-		Music = 0x0AB9CC4
-		Pause = 0x0ABA7F8
-		React = 0x2A100E2
-		Cntrl = 0x2A16168
-		Timer = 0x0ABA7D0
-		Songs = 0x0B64CF4
-		GScre = 0x072A130
-		GMdal = 0x072A2C4
-		GKill = 0x0AF60C6
-		CamTyp = 0x0717CA8
-		GamSpd = 0x0716424
-		CutNow = 0x0B63F18
-		CutLen = 0x0B63F34
-		CutSkp = 0x0B63F1C
-		BtlTyp = 0x2A10384
-		BtlEnd = 0x2A0EC60
-		TxtBox = 0x074CF20
-		DemCln = 0x2A0E834
-		Slot1    = 0x2A22518
+		Now = 0x0717008
+		Sve = 0x2A0C540
+		Save = 0x09A98B0
+		Obj0Pointer = 0x2A25030
+		Sys3Pointer = 0x2AE5E50
+		Btl0Pointer = 0x2AE5E58
+		ARDPointer = 0x2A0F828
+		Music = 0x0ABAD44
+		Pause = 0x0ABB878
+		React = 0x2A11162
+		Cntrl = 0x2A171E8
+		Timer = 0x0ABB850
+		Songs = 0x0B65D74
+		GScre = 0x072B130
+		GMdal = 0x072B2C4
+		GKill = 0x0AF7146
+		CamTyp = 0x0718CA8
+		GamSpd = 0x0717424
+		CutNow = 0x0B64F98
+		CutLen = 0x0B64FB4
+		CutSkp = 0x0B64F9C
+		BtlTyp = 0x2A11404
+		BtlEnd = 0x2A0FCE0
+		TxtBox = 0x074DF20
+		DemCln = 0x2A0F8B4
+		Slot1    = 0x2A23598
 		NextSlot = 0x278
-		Point1   = 0x2A0E9C8
+		Point1   = 0x2A0FA48
 		NxtPoint = 0x50
-		Gauge1   = 0x2A0EAB8
+		Gauge1   = 0x2A0FB38
 		NxtGauge = 0x48
-		Menu1    = 0x2A10090
+		Menu1    = 0x2A11110
 		NextMenu = 0x8
 		Obj0 = ReadLong(Obj0Pointer)
 		Sys3 = ReadLong(Sys3Pointer)
 		Btl0 = ReadLong(Btl0Pointer)
-		MSN = 0x0BF2340
+		MSN = 0x0BF33C0
+	elseif ReadString(0x9A7070,4) == "KH2J" or ReadString(0x9A70B0,4) == "KH2J" or ReadString(0x9A92F0,4) == "KH2J" then
+		GameVersion = -1
+		print("Epic Version is outdated. Please update the game.")
+	elseif ReadString(0x9A9830,4) == "KH2J" then
+		GameVersion = -1
+		print("Steam Global Version is outdated. Please update the game.")
+	elseif ReadString(0x9A8830,4) == "KH2J" then
+		GameVersion = -1
+		print("Steam JP Version is outdated. Please update the game.")
 	end
 end
 if GameVersion ~= 0 then
@@ -379,7 +388,7 @@ if Place == 0x000F then
 		WarpDoor = 0x16
 	elseif Door == 0x04 then --Beast's Castle
 		WarpDoor = 0x17
-	elseif Door == 0x09 then --Halloween Town	
+	elseif Door == 0x09 then --Halloween Town
 		WarpDoor = 0x18
 	elseif Door == 0x0A then --Agrabah
 		WarpDoor = 0x19
@@ -703,7 +712,7 @@ while ReadByte(Save+0x3671) > ReadByte(Save+0x35CC) and ReadInt(Slot1+0x000) > 1
 	WriteByte(Save+0x35CC,ReadByte(Save+0x35CC)+1)
 end
 --DUMMY 24 = Maximum MP Increased!
-while ReadByte(Save+0x3672) > ReadByte(Save+0x35CD) and ReadInt(Slot1+0x000) > 1 do 
+while ReadByte(Save+0x3672) > ReadByte(Save+0x35CD) and ReadInt(Slot1+0x000) > 1 do
 	local Bonus
 	if ReadByte(Save+0x2498) < 3 then --Non-Critical
 		Bonus = 10
@@ -906,31 +915,14 @@ end
 --Show all items in shops (ASSEMBLY edit)
 if not OnPC then
 	WriteInt(0x264250,0)
-elseif ReadLong(0x2FAA22) == 0x43B70F0D74D68541 then --Epic Global
-	WriteByte(0x2FAA26,0)
-elseif ReadLong(0x2FA682) == 0x43B70F0D74D68541 then --Epic JP
-	WriteByte(0x2FA686,0)
-elseif ReadLong(0x2FB562) == 0x43B70F0D74D68541 then --Steam Global
-	WriteByte(0x2FB566,0)
-elseif ReadLong(0x2FB2E2) == 0x43B70F0D74D68541 then --Steam JP
-	WriteByte(0x2FB2E6,0)
-end
---Alternate Party Models (adding new UCM using MEMT causes problems when shopping)
-if World == 0x0C and Place ~= 0x070C then --Mage & Knight (KH I)
-	WriteString(Obj0+0x16F0,'P_EX020_DC\0',OnPC)
-	WriteString(Obj0+0x1750,'P_EX030_DC\0',OnPC)
-	WriteString(Obj0+0x3250,'P_EX020_DC_ANGRY_NPC\0',OnPC)
-	WriteString(Obj0+0x40F0,'H_ZZ020_DC\0',OnPC)
-	WriteString(Obj0+0x4150,'H_ZZ030_DC\0',OnPC)
-elseif Place == 0x2004 or Place == 0x2104 or Place == 0x2204 or Place == 0x2604 then --Casual (CoM)
-	WriteString(Obj0+0x16F0,'P_EX020_CM\0',OnPC)
-	WriteString(Obj0+0x1750,'P_EX030_CM\0',OnPC)
-elseif ReadString(Obj0+0x16F0,8,OnPC) ~= 'P_EX020\0' then --Revert costume changes
-	WriteString(Obj0+0x16F0,'P_EX020\0',OnPC)
-	WriteString(Obj0+0x1750,'P_EX030\0',OnPC)
-	WriteString(Obj0+0x3250,'P_EX020_ANGRY_NPC\0',OnPC)
-	WriteString(Obj0+0x40F0,'H_ZZ020\0',OnPC)
-	WriteString(Obj0+0x4150,'H_ZZ030\0',OnPC)
+elseif ReadLong(0x2FAD62) == 0x43B70F0D74D68541 then --Epic Global
+	WriteByte(0x2FAD66,0)
+elseif ReadLong(0x2FABA2) == 0x43B70F0D74D68541 then --Epic JP
+	WriteByte(0x2FABA6,0)
+elseif ReadLong(0x2FB8A2) == 0x43B70F0D74D68541 then --Steam Global
+	WriteByte(0x2FB8A6,0)
+elseif ReadLong(0x2FB622) == 0x43B70F0D74D68541 then --Steam JP
+	WriteByte(0x2FB626,0)
 end
 --Navigational Map Unlocks Valor Form
 if ReadByte(Save+0x36C0)&0x80 == 0x80 then
@@ -1189,7 +1181,7 @@ if ReadByte(Save+0x1D3E) > 0 then
 end
 end
 
-function HT() 
+function HT()
 --Data Vexen -> Halloween Town
 if Place == 0x1A04 then
 	local PostSave = ReadByte(Save+0x1E5E)

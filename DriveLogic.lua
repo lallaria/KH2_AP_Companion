@@ -4,30 +4,30 @@ function _OnInit()
 end
 function _OnFrame()
     if true then --Define current values for common addresses
-        if GameVersion==0 then 
-            if ReadString(0x09A92F0,4) == 'KH2J' then --EGS
-                drive1=0x3F1CCE
-                drive2=0x400E64
-                drive3=0x3E27AC
-                drive4=0x400EB8
-                drive5=0x3FFAF4
-                drive6=0x3C1EFE
-                drive7=0x3F1CEA
+        if GameVersion==0 then
+            if ReadString(0x9A9330,4) == 'KH2J' then --EGS
+                drive1=0x3F200E
+                drive2=0x4011A4
+                drive3=0x3E2AEC
+                drive4=0x4011F8
+                drive5=0x3FFE34
+                drive6=0x3C223E
+                drive7=0x3F202A
                 GameVersion=1
                 Now = 0x0716DF8
-                Save = 0x09A92F0
+                Save = 0x09A9330
             end
-            if ReadString(0x09A9830,4) == 'KH2J' then --Steam Global
-                drive1=0x3F29EE
-                drive2=0x401B84
-                drive3=0x3E34CC
-                drive4=0x401BD8
-                drive5=0x400814
-                drive6=0x3C2C1E
-                drive7=0x3F2A0A   
+            if ReadString(0x9A98B0,4) == 'KH2J' then --Steam Global
+                drive1=0x3F2D2E
+                drive2=0x401EC4
+                drive3=0x3E380C
+                drive4=0x401F18
+                drive5=0x400B54
+                drive6=0x3C2F5E
+                drive7=0x3F2D4A
                 GameVersion=2
                 Now = 0x0717008
-                Save = 0x09A9830
+                Save = 0x09A98B0
             end
         end
         if GameVersion==0 then
@@ -43,7 +43,7 @@ function _OnFrame()
         Evt    = ReadShort(Now+0x08)
         PrevPlace = ReadShort(Now+0x30)
     end
-        
+
     -- if room is before datas and place is before datas and they are not in stt
 	-- if world == 100aw then give ability to go into drive
 	-- credit to ksx for the base of this lua script
@@ -67,4 +67,4 @@ function _OnFrame()
         WriteByte(drive7, 0x01)
     end
 end
-        
+
