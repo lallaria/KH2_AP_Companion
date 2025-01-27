@@ -1,5 +1,5 @@
 --ROM Version
---Last Update: v1.0.0.9 Epic & Steam addresses
+--Last Update: v1.0.0.10 Epic & Steam addresses
 
 LUAGUI_NAME = 'GoA ROM Randomizer Build'
 LUAGUI_AUTH = 'SonicShadowSilver2 (Ported by Num)'
@@ -7,7 +7,7 @@ LUAGUI_DESC = 'A GoA build for use with the Randomizer. Requires ROM patching.'
 
 function _OnInit()
 GameVersion = 0
-print('GoA v1.54.3 - Archipelago')
+print('GoA v1.54.3 | Archipelago Version V1')
 GoAOffset = 0x7C
 SeedCleared = false
 end
@@ -392,7 +392,7 @@ if Place == 0x000F then
 		WarpDoor = 0x16
 	elseif Door == 0x04 then --Beast's Castle
 		WarpDoor = 0x17
-	elseif Door == 0x09 then --Halloween Town
+	elseif Door == 0x09 then --Halloween Town	
 		WarpDoor = 0x18
 	elseif Door == 0x0A then --Agrabah
 		WarpDoor = 0x19
@@ -703,6 +703,11 @@ while ReadByte(Save+0x3695) > ReadByte(Save+0x35C5) do
 	WriteInt(Save+0x2440,ReadInt(Save+0x2440)+5000)
 	WriteByte(Save+0x35C5,ReadByte(Save+0x35C5)+1)
 end
+-- Bounty Money 
+while ReadByte(Save+0x36C2)&0x20 > ReadByte(Save+0x3D18) do
+	WriteInt(Save+0x2440,ReadInt(Save+0x2440)+1000)
+	WriteByte(Save+0x3D18,ReadByte(Save+0x3D18)+1)
+end
 --DUMMY 23 = Maximum HP Increased!
 while ReadByte(Save+0x3671) > ReadByte(Save+0x35CC) and ReadInt(Slot1+0x000) > 1 do
 	local Bonus
@@ -716,7 +721,7 @@ while ReadByte(Save+0x3671) > ReadByte(Save+0x35CC) and ReadInt(Slot1+0x000) > 1
 	WriteByte(Save+0x35CC,ReadByte(Save+0x35CC)+1)
 end
 --DUMMY 24 = Maximum MP Increased!
-while ReadByte(Save+0x3672) > ReadByte(Save+0x35CD) and ReadInt(Slot1+0x000) > 1 do
+while ReadByte(Save+0x3672) > ReadByte(Save+0x35CD) and ReadInt(Slot1+0x000) > 1 do 
 	local Bonus
 	if ReadByte(Save+0x2498) < 3 then --Non-Critical
 		Bonus = 10
@@ -755,6 +760,11 @@ while ReadByte(Save+0x3660) > ReadByte(Save+0x35DB) and ReadInt(Slot1+0x000) > 1
 		WriteByte(Save+0x2502,ReadByte(Save+0x2502)+1)
 	end
 	WriteByte(Save+0x35DB,ReadByte(Save+0x35DB)+1)
+end
+--DUMMY 12 = TRAP - maybe we can throw an event on here too someday
+while ReadByte(Save+0x36C1)&0x02 > ReadByte(Save+0x3D13) and ReadInt(Slot1+0x000) > 20 do
+	WriteInt(Slot1,ReadInt(Slot1+0x000)-10)
+	WriteByte(Save+0x3D13,ReadByte(Save+0x3D13)+1)
 end
 -- if potion null is greater than counter
 while ReadByte(Save+0x36B8) > ReadByte(Save+0x3613) do
@@ -1014,21 +1024,6 @@ end
 if ReadShort(Save+0x1B7C) == 0x04 and SeedCleared then
 	WriteShort(Save+0x1B7C, 0x0D) --The Altar of Naught MAP (Door RC Available)
 end
--- Engine Core Wrong Warp
-if Place==6930 then
-	--Warp into the appropriate World, Room, Door, Map, Btl, Evt
-	Warp(18,25,0,70,70,70)
-end
-
-if World==18 and Room==27 and Place==6930 then
-	if ReadByte(Save+0x36B2) > 0 and ReadByte(Save+0x36B3) > 0 and ReadByte(Save+0x36B4) > 0 then
-	--Warp into the appropriate World, Room, Door, Map, Btl, Evt
-		Warp(18,25,0,70,70,70)
-	else
-		Warp(2,33)
-	end
-end
-
 end
 
 function LoD()
@@ -1185,7 +1180,7 @@ if ReadByte(Save+0x1D3E) > 0 then
 end
 end
 
-function HT()
+function HT() 
 --Data Vexen -> Halloween Town
 if Place == 0x1A04 then
 	local PostSave = ReadByte(Save+0x1E5E)

@@ -1,19 +1,27 @@
+- id: 0x3D13
+  en: Trap
+- id: 0x3D14
+  en: It's a trap!
 - id: 0x3B13
   en: Lucky Emblem
 - id: 0x3B14
-  en: JASandaPanda93 Sora! A lucky emblem! - Donald
-- id: 0x3D16
-  en: Disney Castle Key
+  en: Hey Sora, it's a Lucky Emblem!
 - id: 0x3D17
-  en: A key to progress in Disney Castle.
+  en: From the Queen?!
 - id: 0x3D18
   en: Bounty
 - id: 0x3D19
-  en: The Quicker Picker Upper.
+  en: >-
+    I can bring you in warm,
+
+    or I can bring you in cold.
 - id: 0x05FE
-  en: Archipelago Item
+  en: Something Unfamiliar
 - id: 0x05FF
-  en: An item for someone in another game.
+  en: >-
+    This looks like something we should send 
+    
+    through a gateway to another world.
 - id: 1612
   en: High Jump
 - id: 1620

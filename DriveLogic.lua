@@ -5,29 +5,29 @@ end
 function _OnFrame()
     if true then --Define current values for common addresses
         if GameVersion==0 then
-            if ReadString(0x9A9330,4) == 'KH2J' then --EGS
-                drive1=0x3F200E
-                drive2=0x4011A4
-                drive3=0x3E2AEC
-                drive4=0x4011F8
-                drive5=0x3FFE34
-                drive6=0x3C223E
-                drive7=0x3F202A
+            if ReadString(0x09A92F0,4) == 'KH2J' then --EGS
+                drive1=0x3F1CCE
+                drive2=0x400E64
+                drive3=0x3E27AC
+                drive4=0x400EB8
+                drive5=0x3FFAF4
+                drive6=0x3C1EFE
+                drive7=0x3F1CEA
                 GameVersion=1
                 Now = 0x0716DF8
-                Save = 0x09A9330
+                Save = 0x09A92F0
             end
-            if ReadString(0x9A98B0,4) == 'KH2J' then --Steam Global
-                drive1=0x3F2D2E
-                drive2=0x401EC4
-                drive3=0x3E380C
-                drive4=0x401F18
-                drive5=0x400B54
-                drive6=0x3C2F5E
-                drive7=0x3F2D4A
+            if ReadString(0x09A9830,4) == 'KH2J' then --Steam Global
+                drive1=0x3F29EE
+                drive2=0x401B84
+                drive3=0x3E34CC
+                drive4=0x401BD8
+                drive5=0x400814
+                drive6=0x3C2C1E
+                drive7=0x3F2A0A   
                 GameVersion=2
                 Now = 0x0717008
-                Save = 0x09A98B0
+                Save = 0x09A9830
             end
         end
         if GameVersion==0 then
