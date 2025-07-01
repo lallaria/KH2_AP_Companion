@@ -7,7 +7,7 @@ LUAGUI_DESC = 'A GoA build for use with the Randomizer. Requires ROM patching.'
 
 function _OnInit()
 GameVersion = 0
-print('GoA v1.54.3 | Archipelago Version V1')
+print('GoA v1.54.3.1 - Archipelago')
 GoAOffset = 0x7C
 SeedCleared = false
 end
@@ -54,6 +54,7 @@ if (GAME_ID == 0xF266B00B or GAME_ID == 0xFAF99301) and ENGINE_TYPE == "ENGINE" 
 	Sys3 = ReadInt(Sys3Pointer)
 	Btl0 = ReadInt(Btl0Pointer)
 	MSN = 0x04FA440
+	hasDied = false
 elseif GAME_ID == 0x431219CC and ENGINE_TYPE == 'BACKEND' then --PC
 	OnPC = true
 	if ReadString(0x9A9330,4) == 'KH2J' then --EGS
@@ -96,6 +97,7 @@ elseif GAME_ID == 0x431219CC and ENGINE_TYPE == 'BACKEND' then --PC
 		Sys3 = ReadLong(Sys3Pointer)
 		Btl0 = ReadLong(Btl0Pointer)
 		MSN = 0x0BF2C80
+		IsDead = 0x0BEEF28 
 	elseif ReadString(0x9A98B0,4) == 'KH2J' then --Steam Global
 		GameVersion = 3
 		print('GoA Steam Global Version')
@@ -136,6 +138,7 @@ elseif GAME_ID == 0x431219CC and ENGINE_TYPE == 'BACKEND' then --PC
 		Sys3 = ReadLong(Sys3Pointer)
 		Btl0 = ReadLong(Btl0Pointer)
 		MSN = 0x0BF33C0
+		IsDead = 0x0BEF4A8 
 	elseif ReadString(0x9A98B0,4) == 'KH2J' then --Steam JP (same as Global for now)
 		GameVersion = 4
 		print('GoA Steam JP Version')
@@ -176,6 +179,7 @@ elseif GAME_ID == 0x431219CC and ENGINE_TYPE == 'BACKEND' then --PC
 		Sys3 = ReadLong(Sys3Pointer)
 		Btl0 = ReadLong(Btl0Pointer)
 		MSN = 0x0BF33C0
+		IsDead = 0x0BEF4A8 
 	elseif ReadString(0x9A7070,4) == "KH2J" or ReadString(0x9A70B0,4) == "KH2J" or ReadString(0x9A92F0,4) == "KH2J" then
 		GameVersion = -1
 		print("Epic Version is outdated. Please update the game.")
@@ -324,6 +328,36 @@ STT()
 AW()
 At()
 Data()
+
+-- 0x0BEF4A8 steam
+-- 0x0BEEF28 epic
+-- deathlink
+killSora = false
+isDeathLink = ReadLong(IsDead)
+
+-- kills sora if deathlink is active
+if(ReadByte(0x810000)==1)then
+	-- if drive gauge> 5 and world is not atlantica
+	if(Slot1+0x1B2>=5 and World ~= 11) then
+		killSora = true
+	end
+end
+if(isDeathLink~=0) then
+	hasDied = true
+	--print(hasDied)
+end
+if(killSora and ((World~=6 or Room~=0)))then
+	WriteByte(Slot1,0)
+end
+if(hasDied and isDeathLink==0)then
+	--print("sora has come back")
+	hasDied = false
+	WriteByte(0x810000,0)
+	WriteByte(0x810001,0)
+end
+if(isDeathLink~=0 and hasDied==true)then
+	WriteByte(0x810001,1)
+end
 end
 
 function NewGame()
@@ -353,8 +387,13 @@ if Place == 0x2002 and Events(0x01,Null,0x01) then --Station of Serenity Weapons
 	BitOr(Save+0x49F0,0x03) --Shop Tutorial Prompt Flags (1=Big Shops, 2=Small Shops)
 	--Fix for a softlock added on purpose for debugging purposes
 	--It'll warp you to Wedding Ship if Lua isn't running; this code will warp you properly to GoA)
-	WriteShort(BAR(ARD,0x0A,0xD6),0x04,OnPC)
-	WriteShort(BAR(ARD,0x0A,0xD8),0x1A,OnPC)
+	if ReadShort(BAR(ARD,0x0A,0xD6),OnPC) == 0x0B and ReadShort(BAR(ARD,0x0A,0xD8),OnPC) == 0x0A then
+		WriteShort(BAR(ARD,0x0A,0xD6),0x04,OnPC)
+		WriteShort(BAR(ARD,0x0A,0xD8),0x1A,OnPC)
+	elseif ReadShort(BAR(ARD,0x0A,0xDE),OnPC) == 0x0B and ReadShort(BAR(ARD,0x0A,0xE0),OnPC) == 0x0A then
+		WriteShort(BAR(ARD,0x0A,0xDE),0x04,OnPC)
+		WriteShort(BAR(ARD,0x0A,0xE0),0x1A,OnPC)
+	end
 end
 end
 
@@ -392,7 +431,7 @@ if Place == 0x000F then
 		WarpDoor = 0x16
 	elseif Door == 0x04 then --Beast's Castle
 		WarpDoor = 0x17
-	elseif Door == 0x09 then --Halloween Town	
+	elseif Door == 0x09 then --Halloween Town
 		WarpDoor = 0x18
 	elseif Door == 0x0A then --Agrabah
 		WarpDoor = 0x19
@@ -721,7 +760,7 @@ while ReadByte(Save+0x3671) > ReadByte(Save+0x35CC) and ReadInt(Slot1+0x000) > 1
 	WriteByte(Save+0x35CC,ReadByte(Save+0x35CC)+1)
 end
 --DUMMY 24 = Maximum MP Increased!
-while ReadByte(Save+0x3672) > ReadByte(Save+0x35CD) and ReadInt(Slot1+0x000) > 1 do 
+while ReadByte(Save+0x3672) > ReadByte(Save+0x35CD) and ReadInt(Slot1+0x000) > 1 do
 	local Bonus
 	if ReadByte(Save+0x2498) < 3 then --Non-Critical
 		Bonus = 10
@@ -760,11 +799,6 @@ while ReadByte(Save+0x3660) > ReadByte(Save+0x35DB) and ReadInt(Slot1+0x000) > 1
 		WriteByte(Save+0x2502,ReadByte(Save+0x2502)+1)
 	end
 	WriteByte(Save+0x35DB,ReadByte(Save+0x35DB)+1)
-end
---DUMMY 12 = TRAP - maybe we can throw an event on here too someday
-while ReadByte(Save+0x36C1)&0x02 > ReadByte(Save+0x3D13) and ReadInt(Slot1+0x000) > 20 do
-	WriteInt(Slot1,ReadInt(Slot1+0x000)-10)
-	WriteByte(Save+0x3D13,ReadByte(Save+0x3D13)+1)
 end
 -- if potion null is greater than counter
 while ReadByte(Save+0x36B8) > ReadByte(Save+0x3613) do
@@ -1180,7 +1214,7 @@ if ReadByte(Save+0x1D3E) > 0 then
 end
 end
 
-function HT() 
+function HT()
 --Data Vexen -> Halloween Town
 if Place == 0x1A04 then
 	local PostSave = ReadByte(Save+0x1E5E)

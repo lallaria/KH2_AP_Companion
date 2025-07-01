@@ -1,19 +1,4 @@
 Items:
-- Id: 91 #Basement Map (Trap)
-  Type: Map
-  Flag0: 1
-  Flag1: 5
-  Rank: C
-  StatEntry: 0
-  Name: 34304
-  Description: 34305
-  ShopBuy: 0
-  ShopSell: 0
-  Command: 0
-  Slot: 9
-  Picture: 30
-  Icon1: 0
-  Icon2: 2
 - Id: 90 #Castle Map (Bounty)
   Type: Map
   Flag0: 1
